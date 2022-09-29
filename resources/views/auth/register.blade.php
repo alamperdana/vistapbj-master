@@ -1,19 +1,16 @@
 @extends('layouts.app')
-<link href="{{ asset('css/register.css') }}" rel="stylesheet">
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous"></script>
 @section('content')
 <link href="{{ asset('css/register.css') }}" rel="stylesheet">
-@extends('layouts.app')
 
-@section('content')
 <section class="vh-100">
   <div class="container-fluid h-custom">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-md-9 col-lg-6 col-xl-5">
-        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
           class="img-fluid" alt="Sample image">
       </div>
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
@@ -36,6 +33,8 @@
           <div class="divider d-flex align-items-center my-4">
             <p class="text-center fw-bold mx-3 mb-0"></p>
           </div>
+
+          
 
 
 
@@ -160,7 +159,7 @@
           <div class="text-center text-lg-start mt-4 pt-2">
           <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
-                                </button
+</button>
             <p class="small fw-bold mt-2 pt-1 mb-0">Sudah Punya Akun ? <a href="#!"
                 class="link-danger">Login</a></p>
           </div>
