@@ -191,9 +191,6 @@
 														</a>
                                                     <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
                                                         {{-- //nambah dari sini --}}
-                                                        <li>
-                                                            <a href="{{ route('profil', Auth::user()->id) }}">Profil</a></li>
-                                                        </li>
                                                         <li><span class="edu-icon edu-home-admin author-log-ic"></span>
                                                             @guest
                                                             @if (Route::has('login'))
