@@ -192,7 +192,7 @@
                                                     <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
                                                         {{-- //nambah dari sini --}}
                                                         <li>
-                                                        <a class="Edit" href="{{route('profil')}}" value={{Auth::user()->id}}><span class="edu-icon edu-home-admin author-log-ic"></span>Profil Out</a>
+                                                            <a href="{{ route('profil', Auth::user()->id) }}">Profil</a></li>
                                                         </li>  
                                                         <li><span class="edu-icon edu-home-admin author-log-ic"></span>
                                                             @guest
@@ -490,49 +490,7 @@
     });
         
 
-          $('#formUpload').on('submit', function(event){
-            event.preventDefault();
-            var datas = new FormData(this);
-                $.ajax({
-                    url: '/adminpaketerjalan/import',
-                    data: datas,
-                    cache: false,
-                    contentType: false,
-                    processData: false,
-                    type: 'POST',
-                    method: 'POST',
-                    dataType: 'json',
-                    success: function(){
-                        // Table.ajax.reload(null, false);
-                        alert("berhasil");
-                    },
-                    error: function(xhr){
-                        alert("gagal");
-                    },
-            });
-        });
 
-        $('#table-data').on('click', 'tbody tr td .edit', function(e){
-
-            e.preventDefault();
-            window.location.href = "/adminpaketerjalan/edit/" + this.value;
-        });
-
-        $('#table-data').on('click', 'tbody tr td .hapus', function(e){
-
-            e.preventDefault();
-            $.ajax({
-                type : 'GET',
-                url  : 'adminpaketerjalan/hapus/' + this.value,
-                success :  function(response){
-                    alert("Data Berhasil Dihapus!");
-                    location.reload();
-                },
-                error: function(data){
-                    alert("Data Gagal Dihapus!");
-                }
-            })
-        });
         
     </script>
 </body>
