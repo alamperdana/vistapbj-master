@@ -324,31 +324,31 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
                                         <div class="address-hr">
-                                            <p><b>Name</b><br /> {{ Auth::user()->name }}</p>
+                                            <p><b>Name</b><br /></p>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
                                         <div class="address-hr tb-sm-res-d-n dps-tb-ntn">
-                                            <p><b>NIP</b><br /> {{ Auth::user()->nip }}</p>
+                                            <p><b>NIP</b><br /> </p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
                                         <div class="address-hr">
-                                            <p><b>OPD</b><br /> {{ Auth::user()->opd }}</p>
+                                            <p><b>OPD</b><br /> </p>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
                                         <div class="address-hr tb-sm-res-d-n dps-tb-ntn">
-                                            <p><b>Telepon</b><br /> {{ Auth::user()->telepon }}</p>
+                                            <p><b>Telepon</b><br /></p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="address-hr">
-                                            <p><b>Email</b><br /> {{ Auth::user()->email }}</p>
+                                            <p><b>Email</b><br /></p>
                                         </div>
                                     </div>
                                 </div>
