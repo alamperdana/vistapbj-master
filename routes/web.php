@@ -11,6 +11,10 @@ use App\Http\Controllers\adminInfoPenyediaController;
 use App\Http\Controllers\dashboardPaketController;
 //use App\Http\Controllers\ProfilPenggunaController;
 use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\userPaketerBerjalanController;
+use App\Http\Controllers\userInfoPenyediaController;
+use App\Http\Controllers\CariPenyediaController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -61,6 +65,7 @@ Route::post('/admininfopenyedia/tambah', [adminInfoPenyediaController::class, 't
 Route::get('/admininfopenyedia/hapus/{id}', [adminInfoPenyediaController::class, 'hapus']);
 //admin sampe sini
 
+
 //Dashboard Paket
 Route::get('dashboardpaket/getdata/{tahun}', [dashboardPaketController::class, 'getdata']);
 Route::get('dashboardpaket', [dashboardPaketController::class, 'index'])->name('dashboardpaket');
@@ -81,6 +86,9 @@ Route::get('/validate', function () {
 })->middleware('auth');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Pencarian Penyedia terkait SKP
+Route::get('/caripenyedia', [App\Http\Controllers\CariPenyediaController::class, 'cari'])->name('caripenyedia');
 
 //User
 // Route::get('/user', [usercontroller::class, 'index'])->middleware(['auth','isUser'])->name('user');

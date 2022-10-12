@@ -48,6 +48,7 @@ class adminPaketBerjalanController extends Controller
             'tahun'                 => 'required',
             'bulan'                 => 'required',
             'metode_paket'          => 'required',
+            'nama_perusahaan'       => 'required',
 		]);
 
         PaketBerjalan::create([
@@ -65,6 +66,7 @@ class adminPaketBerjalanController extends Controller
             'nama_satker'  => $req->nama_satker,
             'skp'=>$req->skp,
             'paket_berjalan'  => $req->paket_berjalan,
+            'nama_perusahaan' => $req->nama_perusahaan,
         ]);
 
         return response()->json($req->kode_paket);
@@ -95,6 +97,7 @@ class adminPaketBerjalanController extends Controller
             'nama_satker'  => $req->nama_satker,
             'skp'=>$req->skp,
             'paket_berjalan'  => $req->paket_berjalan,
+            'nama_perusahaan' => $req->nama_perusahaan,
         ]);
 
         return response()->json($req->kode_paket);

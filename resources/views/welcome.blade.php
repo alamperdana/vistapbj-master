@@ -15,7 +15,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="#061948">
 		<title>Vista PBJ</title>
 		<!-- Favicon -->
-		<link rel="icon" type="image/png" sizes="56x56" href="assets/halamandepan/images/fav-icon/icon.png">
+		<link rel="shortcut icon" type="image/x-icon" href="img/admin/favicon.ico">
 		<!-- Main style sheet -->
 		<link rel="stylesheet" type="text/css" href="assets/halamandepan/css/style.css">
 		<!-- responsive style sheet -->
@@ -54,24 +54,12 @@
 								<ul class="left-widget">
 									<li>
 										<div id="polyglotLanguageSwitcher">
-											<form action="#">
-												<select id="polyglot-language-options">
-													<option id="en" value="en" selected>English</option>
-													<!--<option id="" value="fr">Bahasa Indonesia</option>-->
-												</select>
-											</form>
 										</div> <!-- End #polyglotLanguageSwitcher -->
 									</li>
 								</ul>
 							</div>
 							<div class="col-md-6 col-sm-4 col-12">
-								<ul class="social-icon">
-									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-								</ul>
+
 							</div>
 						</div> <!-- /.row -->
 					</div> <!-- /.container -->
@@ -84,15 +72,13 @@
 							<!-- ============== Menu Warpper ================ -->
 					   		<div class="menu-wrapper float-right">
 					   			<nav id="mega-menu-holder" class="clearfix">
-								   <ul class="clearfix">
-								   		<li><a href="#">Informasi Paket</a></li>
+								   <li><a href="#">Informasi Paket</a></li>
 									    <li class="active"><a href="#">Pengguna</a>
 									    	<ul class="dropdown">
-											<li>
-												<a href="#">Petunjuk Pengguna Akun</a></li>	
+												<li><a href="#">Petunjuk Pengguna Akun</a></li>	
 									        	<li><a href="{{route('register')}}">Pendaftaran Akun</a></li>
 									        	<li><a href="{{route('login')}}">Login Akun</a></li>
-									      </ul>
+											</ul>
 									    </li>
 										<!--
 									    <li><a href="#">PAGES</a>
@@ -164,40 +150,41 @@
 			============================================== 
 			-->
 			<div id="theme-main-banner" class="banner-one">
-				<div data-src="assets/halamandepan/images/home/slide-5.jpg">
+			<div data-src="assets/halamandepan/images/home/slide-5.png">
 					<div class="camera_caption">
 						<div class="container">
-							<p class="wow fadeInUp animated">The government they survive artical of fortune</p>
-							<h1 class="wow fadeInUp animated" data-wow-delay="0.2s">HIGH-QUALITY MARKET <br> EXPERIENCES</h1>
-							<a href="about.html" class="theme-button-one wow fadeInUp animated" data-wow-delay="0.39s">ABOUT US</a>
+							<h1 class="wow fadeInUp animated" data-wow-delay="0.1s">VISTA PBJ <br> </h1>
+							<p style="color:white;" class="wow fadeInUp animated">
+							Verifikasi Informasi Sertifikat Keterampilan,<br>
+							Keahlian & Sisa Kemampuan Paket Perusahaan Pengadaan Barang Jasa</p>
+							<!-- <a href="about.html" class="theme-button-one wow fadeInUp animated" data-wow-delay="0.39s">ABOUT US</a> -->
 						</div> <!-- /.container -->
 					</div> <!-- /.camera_caption -->
 				</div>
-				<div data-src="assets/halamandepan/images/home/slide-3.jpg">
+				<div data-src="assets/halamandepan/images/home/slide-3.png">
 					<div class="camera_caption">
 						<div class="container">
-							<p class="wow fadeInUp animated">The government they survive artical of fortune</p>
-							<h1 class="wow fadeInUp animated" data-wow-delay="0.2s">HIGH-QUALITY MARKET <br> EXPERIENCES</h1>
-							<a href="about.html" class="theme-button-one wow fadeInUp animated" data-wow-delay="0.39s">ABOUT US</a>
+							<h1 class="wow fadeInUp animated" data-wow-delay="0.1s">VISTA PBJ <br> </h1>
+							<p style="color:white;" class="wow fadeInUp animated">
+							Verifikasi Informasi Sertifikat Keterampilan,<br>
+							Keahlian & Sisa Kemampuan Paket Perusahaan Pengadaan Barang Jasa</p>
+							<!-- <a href="about.html" class="theme-button-one wow fadeInUp animated" data-wow-delay="0.39s">ABOUT US</a> -->
 						</div> <!-- /.container -->
 					</div> <!-- /.camera_caption -->
 				</div>
-				<div data-src="assets/halamandepan/images/home/slide-1.jpg">
+				<div data-src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Download.gif">
 					<div class="camera_caption">
 						<div class="container">
-							<p class="wow fadeInUp animated">The government they survive artical of fortune</p>
-							<h1 class="wow fadeInUp animated" data-wow-delay="0.2s">HIGH-QUALITY MARKET <br> EXPERIENCES</h1>
-							<a href="about.html" class="theme-button-one wow fadeInUp animated" data-wow-delay="0.39s">ABOUT US</a>
+							<h1 class="wow fadeInUp animated" data-wow-delay="0.1s"> VISTA PBJ <br> </h1>
+							<p style="color:white;" class="wow fadeInUp animated">
+							Verifikasi Informasi Sertifikat Keterampilan,<br>
+							Keahlian & Sisa Kemampuan Paket Perusahaan Pengadaan Barang Jasa</p>
+							<!-- <a href="about.html" class="theme-button-one wow fadeInUp animated" data-wow-delay="0.39s">ABOUT US</a> -->
 						</div> <!-- /.container -->
 					</div> <!-- /.camera_caption -->
 				</div>
 			</div> <!-- /#theme-main-banner -->
 			
-			<!-- 
-			=============================================
-				Our Solution
-			============================================== 
-			-->
 			
 		
 			<!--
@@ -208,101 +195,18 @@
 			<!-- Google Map -->
 			<div class="map-canvas"></div>
 			
-
-			<!--
-			=====================================================
-				Footer
-			=====================================================
-			-->
 			<footer class="theme-footer-two">
 				<div class="top-footer">
 					<div class="container">
-						<div class="row">
-							<div class="col-lg-4 col-sm-6 col-12 logo-widget">
-								<div class="logo"><a href="index.html"><img src="assets/halamandepan/images/logo/logo2.png" alt=""></a></div>
-								<p>Copyright &copy; 2022. PBJAP</p>
-								
-								<!--<ul class="social-icon">
-									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-									<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-								</ul>
-							-->
-							</div> <!-- /.logo-widget -->
-							<!--
-							<div class="col-lg-2 col-sm-6 col-12 footer-list">
-								<h6 class="title">EXPLORE</h6>
-								<ul>
-									<li><a href="about.html">About us</a></li>
-									<li><a href="service.html">Our Solutions</a></li>
-									<li><a href="project.html">Case Studies</a></li>
-									<li><a href="blog.html">Blog</a></li>
-									<li><a href="contact.html">Contact us</a></li>
-								</ul>
-							-->
-							</div> <!-- /.footer-list -->
-							<!--
-							<div class="col-lg-3 col-sm-6 col-12 footer-gallery">
-								<h6 class="title">Gallery</h6>
-								<div class="wrapper">
-									<div class="row">
-										<div class="col-4">
-											<a href="images/portfolio/7.jpg" data-fancybox="gallery" data-caption="Caption for single image" class="fancybox"><img src="images/portfolio/7.jpg" alt=""></a>
-										</div>
-										<div class="col-4">
-											<a href="images/portfolio/8.jpg" data-fancybox="gallery" data-caption="Caption for single image" class="fancybox"><img src="images/portfolio/8.jpg" alt=""></a>
-										</div>
-										<div class="col-4">
-											<a href="images/portfolio/9.jpg" data-fancybox="gallery" data-caption="Caption for single image" class="fancybox"><img src="images/portfolio/9.jpg" alt=""></a>
-										</div>
-										<div class="col-4">
-											<a href="images/portfolio/10.jpg" data-fancybox="gallery" data-caption="Caption for single image" class="fancybox"><img src="images/portfolio/10.jpg" alt=""></a>
-										</div>
-										<div class="col-4">
-											<a href="images/portfolio/11.jpg" data-fancybox="gallery" data-caption="Caption for single image" class="fancybox"><img src="images/portfolio/11.jpg" alt=""></a>
-										</div>
-										<div class="col-4">
-											<a href="images/portfolio/12.jpg" data-fancybox="gallery" data-caption="Caption for single image" class="fancybox"><img src="images/portfolio/12.jpg" alt=""></a>
-										</div>
-									</div>
-								</div>
-							-->
-							</div> <!-- /.footer-gallery -->
+						<div class="row">					
+							<div class="text-white mb-3 mb-md-50"> Copyright © 2022. PBJAP.</div>
+							<div>
+						</div>
+					</div>
+				</div>
+			</footer>
+	
 							
-							<!--
-							<div class="col-lg-3 col-sm-6 col-12 contact-widget">
-								<h6 class="title">CONTACT</h6>
-								<ul>
-									<li>
-										<i class="flaticon-direction-signs"></i>
-										23A, Queenstown St, Log Vegas, United States.
-									</li>
-									<li>
-										<i class="flaticon-multimedia-1"></i>
-										<a href="#">mailhere@support.com</a>
-									</li>
-									<li>
-										<i class="fa fa-phone" aria-hidden="true"></i>
-										<a href="#">(+2) 345  9808  000</a>
-									</li>
-								</ul>
-							</div> <!-- /.contact-widget -->
-						
-						</div> <!-- /.row -->
-					</div> <!-- /.container -->
-				</div> <!-- /.top-footer -->
-				<div class="bottom-footer">
-					<!-- <div class="container">
-						<p>&copy; Copyrights 2022. Vista PBJ.</p>
-					</div> -->
-				</div> <!-- /.bottom-footer -->
-			</footer> <!-- /.theme-footer-two -->
-			
-
-	        
-
 	        <!-- Scroll Top Button -->
 			<button class="scroll-top tran3s">
 				<i class="fa fa-angle-up" aria-hidden="true"></i>

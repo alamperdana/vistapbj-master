@@ -324,36 +324,36 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
                                         <div class="address-hr">
-                                            <p><b>Name</b><br /></p>
+                                            <p><b>Name</b><br/>{{$data->name}}</p>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
                                         <div class="address-hr tb-sm-res-d-n dps-tb-ntn">
-                                            <p><b>NIP</b><br /> </p>
+                                            <p><b>NIP</b><br /> {{$data->nip}}</p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
                                         <div class="address-hr">
-                                            <p><b>OPD</b><br /> </p>
+                                            <p><b>OPD</b><br/>{{$data->opd}}</p>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-6">
                                         <div class="address-hr tb-sm-res-d-n dps-tb-ntn">
-                                            <p><b>Telepon</b><br /></p>
+                                            <p><b>Telepon</b><br/>{{$data->telepon}}></p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="address-hr">
-                                            <p><b>Email</b><br /></p>
+                                            <p><b>Email</b><br/>{{$data->email}}</p>
                                         </div>
                                     </div>
                                 </div>
-                                {{-- <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                <div class="row">
+                                    <!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                         <div class="address-hr">
                                             <a href="#"><i class="fa fa-facebook"></i></a>
                                             <h3>500</h3>
@@ -370,8 +370,8 @@
                                             <a href="#"><i class="fa fa-google-plus"></i></a>
                                             <h3>600</h3>
                                         </div>
-                                    </div>
-                                </div> --}}
+                                    </div> -->
+                                </div> 
                             </div>
                         </div>
                     </div>
@@ -379,7 +379,7 @@
                         <div class="product-payment-inner-st res-mg-t-30 analysis-progrebar-ctn">
                             <ul id="myTabedu1" class="tab-review-design">
                                 {{-- <li class="active"><a href="#description">Activity</a></li> --}}
-                                <li><a href="#INFORMATION">Update Details</a></li>
+                                <li><a href="#INFORMATION">Update Informasi</a></li>
                             </ul>
                             <div id="myTabContent" class="tab-content custom-product-edit">
                                 
@@ -393,13 +393,16 @@
                                                         <form id="formUpload">
                                                         @csrf
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control" id="name" name="name" value="$data->name">
+                                                        <input type="hidden" class="form-control" id="id" name="id">
                                                         </div>
                                                         <div class="form-group">
-                                                            <input type="number" class="form-control" id="nip" name="nip" value="$data->nip">
+                                                        <input type="text" class="form-control" id="name" name="name">
+                                                        </div>
+                                                        <div>
+                                                        <input type="text" class="form-control" id="nip" name="nama_perusahaan" value="{{$data->nama_perusahaan}}" readonly>
                                                         </div>
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control" id="opd" name="opd" value="$data->opd">
+                                                            <input type="text" class="form-control" id="opd" name="opd" value="{{$data->opd}}">
                                                         </div>
                                                         <div class="form-group">
                                                             <input type="number" class="form-control" id="telepon" name="telepon" value="$data->telepon">
