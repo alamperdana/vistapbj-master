@@ -99,7 +99,7 @@
 								   <span class="mini-click-non">Home</span>
 								</a>
                             <ul class="submenu-angle" aria-expanded="true">
-                                <li><a title="Dashboard v.1" href="index.html"><span class="mini-sub-pro">Dashboard</span></a></li>
+                                <!-- <li><a title="Dashboard v.1" href="index.html"><span class="mini-sub-pro">Dashboard</span></a></li> -->
                             </ul>
                         </li>
 
@@ -119,7 +119,7 @@
                                 <span class="mini-click-non">Info Penyedia</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
                                 <li><a title="Data Table" href="{{route('adminpenyedia')}}"><span class="mini-sub-pro">Data Info Penyedia</span></a></li>
-                                <li><a title="Data Table" href="{{('tambahadmininfopenyedia')}}"><span class="mini-sub-pro">Tambah Data Info Penyedia Manual</span></a></li>
+                                <li><a title="Data Table" href="{{route('tambahadmininfopenyedia')}}"><span class="mini-sub-pro">Tambah Data Info Penyedia Manual</span></a></li>
                             </ul>
                         </li>    
                         <!--

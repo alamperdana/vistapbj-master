@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title> Admin | Informasi Data Paket</title>
+    <title> Admin | Informasi Akun Pengguna</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -79,6 +79,15 @@
 
     </head>
 <body>
+
+<style>
+.heading:hover {
+color: red;
+}
+.a{
+    background-color: red;
+}
+</style>
     <!--[if lt IE 8]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
@@ -99,7 +108,7 @@
 								   <span class="mini-click-non">Home</span>
 								</a>
                             <ul class="submenu-angle" aria-expanded="true">
-                                <li><a title="Dashboard v.1" href="index.html"><span class="mini-sub-pro">Dashboard</span></a></li>
+                                <!-- <li><a title="Dashboard v.1" href="index.html"><span class="mini-sub-pro">Dashboard</span></a></li> -->
                             </ul>
                         </li>
 
@@ -108,9 +117,9 @@
                                 <!--<span class="educate-icon educate-library icon-wrap"></span>-->
                                 <span class="mini-click-non">Info Paket  </span></a>
                                 <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Add Library" href="add-library-assets.html"><span class="mini-sub-pro">Tambah Data Info Paket Berjalan Manual</span></a></li>
-                                <li><a title="All Library" href="library-assets.html"><span class="mini-sub-pro">Data Info Paket </span></a></li>
-                                <li><a title="Add Library" href="add-library-assets.html"><span class="mini-sub-pro">Chart</span></a></li>
+                                <li><a title="Add Library" href="{{route('tambahadminpaketberjalan')}}"><span class="mini-sub-pro">Tambah Data Info Paket Berjalan Manual</span></a></li>
+                                <li><a title="All Library" href="{{route('adminpaketberjalan')}}"><span class="mini-sub-pro">Data Info Paket </span></a></li>
+                                <li><a title="Add Library" href="{{route('dashboardpaket')}}"><span class="mini-sub-pro">Chart</span></a></li>
                             </ul>
                         </li>
                         <li>
@@ -118,8 +127,8 @@
                                 <!--<span class="educate-icon educate-data-table icon-wrap"></span>-->
                                 <span class="mini-click-non">Info Penyedia</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Data Table" href="data-table.html"><span class="mini-sub-pro">Data Info Penyedia</span></a></li>
-                                <li><a title="Data Table" href="data-table.html"><span class="mini-sub-pro">Tambah Data Info Penyedia Manual</span></a></li>
+                                <li><a title="Data Table" href="{{route('adminpenyedia')}}"><span class="mini-sub-pro">Data Info Penyedia</span></a></li>
+                                <li><a title="Data Table" href="{{route('tambahadmininfopenyedia')}}"><span class="mini-sub-pro">Tambah Data Info Penyedia Manual</span></a></li>
                             </ul>
                         </li>    
                         <!--
@@ -319,7 +328,7 @@
                         <div class="sparkline13-list">
                             <div class="sparkline13-hd">
                             <div class="main-sparkline13-hd">
-                                    <h1>Tabel <span class="table-project-n">Paket</span> Berjalan</h1>
+                                    <h1>Tabel <span class="table-project-n">Pengguna</span> Sistem</h1>
                                 </div>
                             </div>
                             <div class="sparkline13-graph">

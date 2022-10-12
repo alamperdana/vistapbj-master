@@ -83,7 +83,8 @@ Route::get('/validate', function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //User
-Route::get('/user', [usercontroller::class, 'index'])->middleware(['auth','isUser'])->name('user');
+// Route::get('/user', [usercontroller::class, 'index'])->middleware(['auth','isUser'])->name('user');
+Route::get('/user', [userPaketerBerjalanController::class, 'index'])->middleware(['auth','isUser'])->name('user');
 
 //Paket Berjalan
 Route::get('/userpaketberjalan', 'App\Http\Controllers\userPaketerBerjalanController@index')->name('userpaketberjalan');

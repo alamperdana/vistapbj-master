@@ -160,7 +160,7 @@
           <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
 </button>
-            <p class="small fw-bold mt-2 pt-1 mb-0">Sudah Punya Akun ? <a href="#!"
+            <p class="small fw-bold mt-2 pt-1 mb-0">Sudah Punya Akun ? <a href="{{route('login')}}"
                 class="link-danger">Login</a></p>
           </div>
 

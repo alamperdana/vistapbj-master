@@ -1,237 +1,348 @@
 <!DOCTYPE html>
-  <html lang="zxx">
-    <head>
-      <!-- Basic Page Needs
-      ================================================== -->
-      <meta charset="utf-8">
-      <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Super Clean - Cleaning Services HTML Template</title>
-      <meta name="description" content="Super Clean - Cleaning Services HTML Template. It is built using bootstrap 3.3.2 framework, works totally responsive, easy to customise, well commented codes and seo friendly.">
-      <meta name="keywords" content="cleaning, laundry, blind cleaning, window cleaning, washing, floor cleaning, trash treatment, extra shiny, cloch ironing">
-      <meta name="author" content="rudhisasmito.com">
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<!-- For IE -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- For Resposive Device -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- For Window Tab Color -->
+		<!-- Chrome, Firefox OS and Opera -->
+		<meta name="theme-color" content="#061948">
+		<!-- Windows Phone -->
+		<meta name="msapplication-navbutton-color" content="#061948">
+		<!-- iOS Safari -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="#061948">
+		<title>Vista PBJ</title>
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" sizes="56x56" href="assets/halamandepan/images/fav-icon/icon.png">
+		<!-- Main style sheet -->
+		<link rel="stylesheet" type="text/css" href="assets/halamandepan/css/style.css">
+		<!-- responsive style sheet -->
+		<link rel="stylesheet" type="text/css" href="assets/halamandepan/css/responsive.css">
 
-  	<!-- ==============================================
-  	Favicons
-  	=============================================== -->
-  	<link rel="shortcut icon" href="images/favicon.ico">
-  	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-  	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+		<!-- Fix Internet Explorer ______________________________________-->
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="vendor/html5shiv.js"></script>
+			<script src="vendor/respond.js"></script>
+		<![endif]-->	
+	</head>
 
-  	<!-- ==============================================
-  	CSS VENDOR
-  	=============================================== -->
-  	<link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css" />
-  	<link rel="stylesheet" type="text/css" href="css/vendor/font-awesome.min.css">
-  	<link rel="stylesheet" type="text/css" href="css/vendor/simple-line-icons.css">
-  	<link rel="stylesheet" type="text/css" href="css/vendor/owl.carousel.min.css">
-  	<link rel="stylesheet" type="text/css" href="css/vendor/owl.theme.default.min.css">
-  	<link rel="stylesheet" type="text/css" href="css/vendor/magnific-popup.css">
+	<body>
+		<div class="main-page-wrapper">
 
-  	<!-- ==============================================
-  	Custom Stylesheet
-  	=============================================== -->
-  	<link rel="stylesheet" type="text/css" href="css/style.css" />
+			<!-- ===================================================
+				Loading Transition
+			==================================================== -->
+			<div id="loader-wrapper">
+				<div id="loader"></div>
+			</div>
 
-      <script type="text/javascript" src="js/vendor/modernizr.min.js"></script>
+			
 
-  </head>
+			<!-- 
+			=============================================
+				Theme Header Two
+			============================================== 
+			-->
+			<header class="header-two">
+				<div class="top-header">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-6 col-sm-8 col-12">
+								<ul class="left-widget">
+									<li>
+										<div id="polyglotLanguageSwitcher">
+											<form action="#">
+												<select id="polyglot-language-options">
+													<option id="en" value="en" selected>English</option>
+													<!--<option id="" value="fr">Bahasa Indonesia</option>-->
+												</select>
+											</form>
+										</div> <!-- End #polyglotLanguageSwitcher -->
+									</li>
+								</ul>
+							</div>
+							<div class="col-md-6 col-sm-4 col-12">
+								<ul class="social-icon">
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+								</ul>
+							</div>
+						</div> <!-- /.row -->
+					</div> <!-- /.container -->
+				</div> <!-- /.top-header -->
 
-  <body>
+				<div class="theme-menu-wrapper">
+					<div class="container">
+						<div class="bg-wrapper clearfix">
+							<div class="logo float-left"><a href="index.html"><img src="assets/halamandepan/images/logo/logo.png" alt=""></a></div>
+							<!-- ============== Menu Warpper ================ -->
+					   		<div class="menu-wrapper float-right">
+					   			<nav id="mega-menu-holder" class="clearfix">
+								   <ul class="clearfix">
+								   		<li><a href="#">Informasi Paket</a></li>
+									    <li class="active"><a href="#">Pengguna</a>
+									    	<ul class="dropdown">
+											<li>
+												<a href="#">Petunjuk Pengguna Akun</a></li>	
+									        	<li><a href="{{route('register')}}">Pendaftaran Akun</a></li>
+									        	<li><a href="{{route('login')}}">Login Akun</a></li>
+									      </ul>
+									    </li>
+										<!--
+									    <li><a href="#">PAGES</a>
+									    	<ul class="dropdown">
+									    		<li><a href="about.html">About us</a></li>
+									    		<li><a href="team.html">Our team</a></li>
+									    		<li><a href="faq.html">Faq's</a></li>
+									    		<li><a href="404.html">404</a></li>
+									    		<li><a href="shop.html">Shop</a></li>
+									    		<li><a href="shop-details.html">Shop details</a></li>
+									            <li><a href="#">Third Level menu</a>
+									    			<ul>
+									    				<li><a href="#">Demo one</a></li>
+									    				<li><a href="#">Demo two</a></li>
+									    			</ul>
+									    		</li>
+									       </ul>
+									    </li>
+									    <li><a href="#">Service</a>
+									    	<ul class="dropdown">
+									        	<li><a href="service.html">Service Version one</a></li>
+									        	<li><a href="service-v2.html">Service version two</a></li>
+									        	<li><a href="service-details.html">Service Details</a></li>
+									       </ul>
+									    </li>
+									    <li><a href="#">Portfolio</a>
+									    	<ul class="dropdown">
+									        	<li><a href="project.html">project</a></li>
+									        	<li><a href="project-details.html">Project details</a></li>
+									       </ul>
+									    </li>
+									    <li><a href="#">Blog</a>
+									    	<ul class="dropdown">
+									        	<li><a href="blog.html">Blog List</a></li>
+									        	<li><a href="blog-grid.html">Blog Grid</a></li>
+									        	<li><a href="blog-details.html">Blog details</a></li>
+									       </ul>
+									    </li>
+									    <li><a href="contact.html">contact</a></li>
+								   </ul>
+								</nav> <!-- /#mega-menu-holder -->
+					   		</div> <!-- /.menu-wrapper -->
+					   		<!--<div class="right-widget float-right">
+					   			<ul>
+					   				<li class="cart-icon">
+					   					<a href="#"><i class="flaticon-tool"></i> <span>2</span></a>
+					   				</li>
+					   				<li class="search-option">
+					   					<div class="dropdown">
+					   						<button type="button" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search" aria-hidden="true"></i></button>
+											<form action="#" class="dropdown-menu">
+												<input type="text" Placeholder="Enter Your Search">
+												<button><i class="fa fa-search"></i></button>
+											</form>
+					   					</div>
+					   				</li>
+					   			</ul>
+					   		</div>
+						--> <!-- /.right-widget -->
+						</div> <!-- /.bg-wrapper -->
+					</div> <!-- /.container -->
+				</div> <!-- /.theme-menu-wrapper -->
+			</header> <!-- /.header-two -->
 
-  	<!-- Load page -->
-  	<div class="animationload">
-  		<div class="loader"></div>
-  	</div>
+			
+			<!-- 
+			=============================================
+				Theme Main Banner
+			============================================== 
+			-->
+			<div id="theme-main-banner" class="banner-one">
+				<div data-src="assets/halamandepan/images/home/slide-5.jpg">
+					<div class="camera_caption">
+						<div class="container">
+							<p class="wow fadeInUp animated">The government they survive artical of fortune</p>
+							<h1 class="wow fadeInUp animated" data-wow-delay="0.2s">HIGH-QUALITY MARKET <br> EXPERIENCES</h1>
+							<a href="about.html" class="theme-button-one wow fadeInUp animated" data-wow-delay="0.39s">ABOUT US</a>
+						</div> <!-- /.container -->
+					</div> <!-- /.camera_caption -->
+				</div>
+				<div data-src="assets/halamandepan/images/home/slide-3.jpg">
+					<div class="camera_caption">
+						<div class="container">
+							<p class="wow fadeInUp animated">The government they survive artical of fortune</p>
+							<h1 class="wow fadeInUp animated" data-wow-delay="0.2s">HIGH-QUALITY MARKET <br> EXPERIENCES</h1>
+							<a href="about.html" class="theme-button-one wow fadeInUp animated" data-wow-delay="0.39s">ABOUT US</a>
+						</div> <!-- /.container -->
+					</div> <!-- /.camera_caption -->
+				</div>
+				<div data-src="assets/halamandepan/images/home/slide-1.jpg">
+					<div class="camera_caption">
+						<div class="container">
+							<p class="wow fadeInUp animated">The government they survive artical of fortune</p>
+							<h1 class="wow fadeInUp animated" data-wow-delay="0.2s">HIGH-QUALITY MARKET <br> EXPERIENCES</h1>
+							<a href="about.html" class="theme-button-one wow fadeInUp animated" data-wow-delay="0.39s">ABOUT US</a>
+						</div> <!-- /.container -->
+					</div> <!-- /.camera_caption -->
+				</div>
+			</div> <!-- /#theme-main-banner -->
+			
+			<!-- 
+			=============================================
+				Our Solution
+			============================================== 
+			-->
+			
+		
+			<!--
+			=====================================================
+				Google Map
+			=====================================================
+			-->
+			<!-- Google Map -->
+			<div class="map-canvas"></div>
+			
 
-  	<!-- HEADER -->
-      <div class="header">
-      	<!-- TOPBAR -->
-  		<div class="topbar">
-  			<div class="container">
-  				<div class="row">
-  					<div class="col-sm-3 col-md-5">
-  						<div class="topbar-left">
-  							<div class="welcome-text">
-  							24/7 Support Service
-  							</div>
-  						</div>
-  					</div>
-  					<div class="col-sm-9 col-md-7">
-  						<div class="topbar-right">
-  							<ul class="topbar-menu">
-  								<!-- <li><i class="icon-location-pin icons"></i> 99 S.t Jomblo Park Pekanbaru 28292</li> -->
-  							</ul>
-  						</div>
-  				</div>
-  			</div>
+			<!--
+			=====================================================
+				Footer
+			=====================================================
+			-->
+			<footer class="theme-footer-two">
+				<div class="top-footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-4 col-sm-6 col-12 logo-widget">
+								<div class="logo"><a href="index.html"><img src="assets/halamandepan/images/logo/logo2.png" alt=""></a></div>
+								<p>Copyright &copy; 2022. PBJAP</p>
+								
+								<!--<ul class="social-icon">
+									<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+									<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+								</ul>
+							-->
+							</div> <!-- /.logo-widget -->
+							<!--
+							<div class="col-lg-2 col-sm-6 col-12 footer-list">
+								<h6 class="title">EXPLORE</h6>
+								<ul>
+									<li><a href="about.html">About us</a></li>
+									<li><a href="service.html">Our Solutions</a></li>
+									<li><a href="project.html">Case Studies</a></li>
+									<li><a href="blog.html">Blog</a></li>
+									<li><a href="contact.html">Contact us</a></li>
+								</ul>
+							-->
+							</div> <!-- /.footer-list -->
+							<!--
+							<div class="col-lg-3 col-sm-6 col-12 footer-gallery">
+								<h6 class="title">Gallery</h6>
+								<div class="wrapper">
+									<div class="row">
+										<div class="col-4">
+											<a href="images/portfolio/7.jpg" data-fancybox="gallery" data-caption="Caption for single image" class="fancybox"><img src="images/portfolio/7.jpg" alt=""></a>
+										</div>
+										<div class="col-4">
+											<a href="images/portfolio/8.jpg" data-fancybox="gallery" data-caption="Caption for single image" class="fancybox"><img src="images/portfolio/8.jpg" alt=""></a>
+										</div>
+										<div class="col-4">
+											<a href="images/portfolio/9.jpg" data-fancybox="gallery" data-caption="Caption for single image" class="fancybox"><img src="images/portfolio/9.jpg" alt=""></a>
+										</div>
+										<div class="col-4">
+											<a href="images/portfolio/10.jpg" data-fancybox="gallery" data-caption="Caption for single image" class="fancybox"><img src="images/portfolio/10.jpg" alt=""></a>
+										</div>
+										<div class="col-4">
+											<a href="images/portfolio/11.jpg" data-fancybox="gallery" data-caption="Caption for single image" class="fancybox"><img src="images/portfolio/11.jpg" alt=""></a>
+										</div>
+										<div class="col-4">
+											<a href="images/portfolio/12.jpg" data-fancybox="gallery" data-caption="Caption for single image" class="fancybox"><img src="images/portfolio/12.jpg" alt=""></a>
+										</div>
+									</div>
+								</div>
+							-->
+							</div> <!-- /.footer-gallery -->
+							
+							<!--
+							<div class="col-lg-3 col-sm-6 col-12 contact-widget">
+								<h6 class="title">CONTACT</h6>
+								<ul>
+									<li>
+										<i class="flaticon-direction-signs"></i>
+										23A, Queenstown St, Log Vegas, United States.
+									</li>
+									<li>
+										<i class="flaticon-multimedia-1"></i>
+										<a href="#">mailhere@support.com</a>
+									</li>
+									<li>
+										<i class="fa fa-phone" aria-hidden="true"></i>
+										<a href="#">(+2) 345  9808  000</a>
+									</li>
+								</ul>
+							</div> <!-- /.contact-widget -->
+						
+						</div> <!-- /.row -->
+					</div> <!-- /.container -->
+				</div> <!-- /.top-footer -->
+				<div class="bottom-footer">
+					<!-- <div class="container">
+						<p>&copy; Copyrights 2022. Vista PBJ.</p>
+					</div> -->
+				</div> <!-- /.bottom-footer -->
+			</footer> <!-- /.theme-footer-two -->
+			
 
-  		<!-- NAVBAR SECTION -->
-  		<div class="navbar navbar-main">
+	        
 
-  			<div class="container container-nav">
-
-  				<div class="navbar-header">
-  					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-  						<span class="icon-bar"></span>
-  						<span class="icon-bar"></span>
-  						<span class="icon-bar"></span>
-  					</button>
-
-  					<a class="navbar-brand" href="index.html">
-  						<img src="images/logo.png" alt="" />
-  					</a>
-  				</div>
-
-
-  				<nav class="navbar-collapse collapse">
-  					<ul class="nav navbar-nav navbar-right">
-
-  						<li> <a href="#">Informasi Paket</a></li>
-
-  						<li class="dropdown">
-  						  <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pengguna <span class="caret"></span></a>
-  						  <ul class="dropdown-menu">
-  							<li><a href="#">Petunjuk Pengguna</a></li>
-  							<li><a href="{{ route('register') }}">Register</a></li>
-  							<li><a href="{{ route('login') }}">Login</a></li>
-  						  </ul>
-  					</ul>
-
-  				</nav>
-
-  			</div>
-  	    </div>
-
-
-
-      </div>
-
-  	<!-- BANNER -->
-  	<div id="slides" class="section banner">
-  		<ul class="slides-container">
-  			<li>
-  				<img src="images/1920x960.jpg" alt="">
-  				<div class="overlay-bg"></div>
-  				<div class="container">
-  					<div class="wrap-caption center">
-  						<h2 class="caption-heading">
-  							Professional Cleaning Services Provider
-  						</h2>
-  						<p class="excerpt">We provide best solutions for a Clean Environment. If you need any help in cleaning or maintenance.</p>
-  						<a href="#" class="btn btn-primary" title="Get in Touch">Get in Touch</a>
-  					</div>
-  				</div>
-  			</li>
-  			<li>
-  				<img src="images/1920x960.jpg" alt="">
-  				<div class="overlay-bg"></div>
-  				<div class="container">
-  					<div class="wrap-caption">
-  						<h2 class="caption-heading">
-  							We are the biggest company in the world
-  						</h2>
-  						<p class="excerpt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-  						<a href="#" class="btn btn-primary" title="LEARN MORE">Learn More</a> <a href="#" class="btn btn-secondary" title="CONTACT US">Contact Us</a>
-  					</div>
-  				</div>
-  			</li>
-
-  		</ul>
-
-  		<nav class="slides-navigation">
-  			<div class="container">
-  				<a href="#" class="next">
-  					<i class="fa fa-chevron-right"></i>
-  				</a>
-  				<a href="#" class="prev">
-  					<i class="fa fa-chevron-left"></i>
-  				</a>
-  	      	</div>
-  	    </nav>
-  	</div>
-
-  	<!-- PROCESS -->
-
-  	<!-- FOOTER SECTION -->
-    <div class="footer">
-  		<div class="container">
-  			<div class="row">
-  				<div class="col-sm-3 col-md-3">
-  					<div class="footer-item">
-  						<img src="images/logo.png" alt="logo bottom" class="logo-bottom">
-  						<div class="footer-sosmed">
-  							<a href="#" title="">
-  								<div class="item">
-  									<i class="fa fa-facebook"></i>
-  								</div>
-  							</a>
-  							<a href="#" title="">
-  								<div class="item">
-  									<i class="fa fa-twitter"></i>
-  								</div>
-  							</a>
-  							<a href="#" title="">
-  								<div class="item">
-  									<i class="fa fa-instagram"></i>
-  								</div>
-  							</a>
-  							<a href="#" title="">
-  								<div class="item">
-  									<i class="fa fa-pinterest"></i>
-  								</div>
-  							</a>
-  						</div>
-  					</div>
-  				</div>
-  				<div class="col-sm-4 col-md-4 col-md-offset-1">
-  					<div class="footer-item">
-  						<div class="footer-title">
-  							Link Lain:
-  						</div>
-  						<ul class="list">
-  							<li><a href="http://sireva.jambikota.go.id/" title="">Sireva</a></li>
-  							<li><a href="http://sandipbj.jambikota.go.id/public/l" title="">SandiPBJ</a></li>
-  							<li><a href="faq.html" title="">Sipeka</a></li>
-  							<li><a href="http://lpse.jambikota.go.id/eproc4" title="">LPSE</a></li>
-  						</ul>
-  					</div>
-  				</div>
-  				<div class="col-sm-4 col-md-4">
-  					<div class="footer-item">
-  						<div class="footer-title">
-  							Copyright
-  						</div>
-  						<p>2022. PBJAP</p>
-  						<form action="#" class="footer-subscribe">
-
-  			      </form>
-  					</div>
-  				</div>
-  			</div>
-  		</div>
+	        <!-- Scroll Top Button -->
+			<button class="scroll-top tran3s">
+				<i class="fa fa-angle-up" aria-hidden="true"></i>
+			</button>
+			
 
 
+		<!-- Optional JavaScript _____________________________  -->
 
-  	</div>
+    	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    	<!-- jQuery -->
+		<script src="assets/halamandepan/vendor/jquery.2.2.3.min.js"></script>
+		<!-- Popper js -->
+		<script src="assets/halamandepan/vendor/popper.js/popper.min.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="assets/halamandepan/vendor/bootstrap/js/bootstrap.min.js"></script>
+		<!-- Camera Slider -->
+		<script src='assets/halamandepan/vendor/Camera-master/scripts/jquery.mobile.customized.min.js'></script>
+	    <script src='assets/halamandepan/vendor/Camera-master/scripts/jquery.easing.1.3.js'></script> 
+	    <script src='assets/halamandepan/vendor/Camera-master/scripts/camera.min.js'></script>
+	    <!-- menu  -->
+		<script src="assets/halamandepan/vendor/menu/src/js/jquery.slimmenu.js"></script>
+		<!-- WOW js -->
+		<script src="assets/halamandepan/vendor/WOW-master/dist/wow.min.js"></script>
+		<!-- owl.carousel -->
+		<script src="assets/halamandepan/vendor/owl-carousel/owl.carousel.min.js"></script>
+		<!-- js count to -->
+		<script src="assets/halamandepan/vendor/jquery.appear.js"></script>
+		<script src="assets/halamandepan/vendor/jquery.countTo.js"></script>
+		<!-- Fancybox -->
+		<script src="assets/halamandepan/vendor/fancybox/dist/jquery.fancybox.min.js"></script>
+		<!-- Language Stitcher -->
+		<script src="assets/halamandepan/vendor/language-switcher/jquery.polyglot.language.switcher.js"></script>
+		<!-- Google map js -->
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjQLCCbRKFhsr8BY78g2PQ0_bTyrm_YXU"></script>
+		<script src="assets/halamandepan/vendor/sanzzy-map/dist/snazzy-info-window.min.js"></script>
 
-  	<!-- JS VENDOR -->
-  	<script type="text/javascript" src="js/vendor/jquery.min.js"></script>
-  	<script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
-  	<script type="text/javascript" src="js/vendor/jquery.superslides.js"></script>
-  	<script type="text/javascript" src="js/vendor/owl.carousel.js"></script>
-  	<script type="text/javascript" src="js/vendor/bootstrap-hover-dropdown.min.js"></script>
-  	<script type="text/javascript" src="js/vendor/jquery.magnific-popup.min.js"></script>
-
-  	<!-- sendmail -->
-  	<script type="text/javascript" src="js/vendor/validator.min.js"></script>
-  	<script type="text/javascript" src="js/vendor/form-scripts.js"></script>
-
-  	<script type='text/javascript' src='https://maps.google.com/maps/api/js?sensor=false&#038;ver=4.1.5'></script>
-
-  	<script type="text/javascript" src="js/script.js"></script>
-
-
-  </body>
-  </html>
+		<!-- Theme js -->
+		<script src="assets/halamandepan/js/theme.js"></script>
+		<script src="assets/halamandepan/js/map-script.js"></script>
+		</div> <!-- /.main-page-wrapper -->
+	</body>
+</html>
