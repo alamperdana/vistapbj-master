@@ -14,6 +14,10 @@ use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\userPaketerBerjalanController;
 use App\Http\Controllers\userInfoPenyediaController;
 use App\Http\Controllers\CariPenyediaController;
+<<<<<<< HEAD
+=======
+use App\Http\Controllers\UserguideController;
+>>>>>>> 6d869fd (kompi kia)
 
 
 /*
@@ -31,6 +35,8 @@ use App\Http\Controllers\CariPenyediaController;
 Auth::routes();
 Route::get('/admin', [admincontroller::class, 'index'])->middleware(['auth', 'isAdmin'])->name('admin');
 Route::get('/status/{id}', [HomeController::class, 'status'])->name('status');
+//Download file Upload
+Route::get('admin/{id}/download', 'admincontroller@download')->name('filedownload');
 // Route::group(['Middleware' => ['isAdmin']], function () {
 //     Route::get('/admin', [admincontroller::class, 'index'])->name('admin');
 // });
@@ -73,6 +79,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Dashboard Paket Awal tanpa Login
+Route::get('datadashboardpaket/getdata/{tahun}', [dashboardPaketController::class, 'getdata2']);
+Route::get('datadashboardpaket', [dashboardPaketController::class, 'index2'])->name('datadashboardpaket');
+Route::get('/', function () {
+    return view('welcome');
+});
+
+//User Guide
+Route::get('/userguide', [UserguideController::class, 'index'])->name('userguide');
+Route::get('/downloaduserguide', [UserguideController::class, 'downloaduserguide'])->name('downloaduserguide');
+
 //Profil Pengguna
 // Route::get('/profil', [ProfilController::class, 'index'])->name('profil');
 Route::get('/profil/{id}', [ProfilController::class, 'index'])->name('profil');
@@ -89,6 +106,14 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 //Pencarian Penyedia terkait SKP
 Route::get('/caripenyedia', [App\Http\Controllers\CariPenyediaController::class, 'cari'])->name('caripenyedia');
+<<<<<<< HEAD
+=======
+//Pencarian Penyedia terkait SKA SKT
+Route::get('/cariskaskt', [App\Http\Controllers\CariSkaSktController::class, 'cari'])->name('cariskaskt');
+
+
+
+>>>>>>> 6d869fd (kompi kia)
 
 //User
 // Route::get('/user', [usercontroller::class, 'index'])->middleware(['auth','isUser'])->name('user');
@@ -101,3 +126,4 @@ Route::post('/userpaketberjalan/import', [userPaketerBerjalanController::class, 
 //Info Penyedia
 Route::get('/userinfopenyedia', [userInfoPenyediaController::class, 'index'])->name('userinfopenyedia');
 Route::post('/userinfopenyedia/import', [userInfoPenyediaController::class, 'import']);
+

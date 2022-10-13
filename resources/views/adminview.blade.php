@@ -370,6 +370,7 @@ color: red;
                                                                                                 @endif </a></td>
                                                         <td valign="top" class="text-center">@if($user->role == 0 ) User @else Admin
                                                                                              @endif</td>
+                                                        <td valign="top" class="text-center"><a href= "{{ asset("storage/filepengajuan/". $user->avatar) }}" target="_blank" rel="noopener noreferrer">{{ $user->avatar }}</a></td>
                                                     </tr>
                                                 @endforeach
                                             </tbody>

@@ -79,6 +79,7 @@ class adminPaketBerjalanController extends Controller
 			'pagu_paket'      => 'required',
 			'npwp_perusahaan' => 'required',
 			'nama_satker'      => 'required',
+            'nama_perusahaan'      => 'required',
 		]);
 
         PaketBerjalan::where('kode_paket',$req->kode_paket)->update([

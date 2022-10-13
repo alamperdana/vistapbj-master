@@ -8,6 +8,7 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illmuniate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -56,7 +57,7 @@ class RegisterController extends Controller
             'telepon' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            'avatar' => 'mimes:doc,docx,pdf,xls,xlxs,ppt,pptx', 
+            'avatar' => 'mimes:doc,docx,pdf', 
         ]);
     }
 
@@ -68,31 +69,58 @@ class RegisterController extends Controller
      */
     public function create(array $data)
     {
-        return User::create([
+        $filename='';
+        if($data['avatar']){
+            $filename= $data['avatar']->getClientOriginalName();
+            $data['avatar']->storeAs('public/filepengajuan', $filename);
+        }
+    
+        //isi data dari inputan pada form
+        $datas = [
             'name' => $data['name'],
             'nip' => $data['nip'],
-            'opd' => $data['opd'],
+            'opd' =>  $data['opd'],          
             'telepon' => $data['telepon'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'status'=>false,
-            //'avatar' => $data['avatar'],
-        ]);
+            'status' => 0,
+            'avatar' => $filename == '' ? null : $filename,
+        ];        
+        //proses simpan data
+        $user = User::create($datas);
+        //Kondisi jika berhasil simpan data
+        if($user)
+        {
+            return redirect()->route('login');
+        }
+        // return User::create([
+        //     'name' => $data['name'],
+        //     'nip' => $data['nip'],
+        //     'opd' => $data['opd'],
+        //     'telepon' => $data['telepon'],
+        //     'email' => $data['email'],
+        //     'password' => Hash::make($data['password']),
+        //     'status'=>false,
+        //     'avatar' => $data['avatar'],
+        // ]);
 
-        // $avatar=$request->file('avatar');
-        // $nama_dokumen='FT'. date('Ymdhis'). '.'.$request->file('avatar')->getClientOriginalextension();
-        // $avatar->move('Filepengajuan/', $nama_dokumen);
 
-
-        // //utube laravel daily dari sini
-        // if (request()->hasFile(key: 'avatar'))
+        // if(request::hasfile('avatar'))
         // {
-        //     $avatar= request()->file(key: 'avatar')->getClientOriginalName();
-        //     request()->file(key:'avatar')->storeAs(path: 'avatars', name: $user->id. '/'. $avatar, options: '');
+        //     $request->file('avatar')->move(public_path('img/products/'), $request->file('avatar')->getClientOriginalName());
+
+        //     $product->image = 'img/products/' . $request->file('image')->getClientOriginalName();
+        // }
+
+        //utube laravel daily dari sini
+        // if (request()->hasFile('avatar'))
+        // {
+        //     $avatar= request()->file('avatar')->getClientOriginalName();
+        //     request()->file('avatar')->move('filepengajuan', 'public');
         //     $user->update(['avatar' => $avatar]);
         // }
         // return $user;
-        // //sampe sini
+        //sampe sini
 
         //laracast dari sini
         // $request = request();

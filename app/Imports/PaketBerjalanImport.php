@@ -28,6 +28,10 @@ class PaketBerjalanImport implements ToCollection
             $awal_kontrak_paket = \PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject(array_shift($arr));
             $akhir_kontrak_paket = \PhpOffice\PhpSpreadsheet\Shared\Date::excelToDateTimeObject(array_shift($arr));
             $npwp_perusahaan = array_shift($arr);
+<<<<<<< HEAD
+=======
+            $nama_perusahaan = array_shift($arr);
+>>>>>>> 6d869fd (kompi kia)
 
             if($kode_paket){
 
@@ -47,6 +51,10 @@ class PaketBerjalanImport implements ToCollection
                     'awal_kontrak_paket'    => $awal_kontrak_paket,
                     'akhir_kontrak_paket'   => $akhir_kontrak_paket,
                     'npwp_perusahaan'       => $npwp_perusahaan,
+<<<<<<< HEAD
+=======
+                    'nama_perusahaan'       => $nama_perusahaan,
+>>>>>>> 6d869fd (kompi kia)
                     'nama_satker'       => $nama_satker,
                 ]); 
             }

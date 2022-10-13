@@ -388,6 +388,10 @@
                                                                 <h4>Akhir Kontrak</h4>
                                                                 <input type="date" class="form-control" id="akhir_kontrak_paket" name="akhir_kontrak_paket"">
                                                             </div>
+                                                            <div class="form-group">
+                                                                <h4>Nama Perusahaan</h4>
+                                                                <input type="text" class="form-control" id="nama_perusahaan" name="nama_peerusahaan">
+                                                            </div>
                                                                 <div class="form-group">
                                                                     <h4>NPWP Perusahaan</h4>
                                                                     <input type="text" class="form-control" id="npwp_perusahaan" name="npwp_perusahaan">

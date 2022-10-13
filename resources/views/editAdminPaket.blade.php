@@ -381,6 +381,10 @@
                                                                     <input type="number" class="form-control" id="hps_paket" name="hps_paket" value="{{$data->hps_paket}}">
                                                                 </div>
                                                                 <div class="form-group">
+                                                                    <h4>Nama Perusahaan</h4>
+                                                                    <input type="text" class="form-control" id="nama_perusahaan" name="nama_perusahaan" value="{{$data->nama_perusahaan}}">
+                                                                </div>
+                                                                <div class="form-group">
                                                                     <h4>NPWP Perusahaan</h4>
                                                                     <input type="text" class="form-control" id="npwp_perusahaan" name="npwp_perusahaan" value="{{$data->npwp_perusahaan}}">
                                                                 </div>

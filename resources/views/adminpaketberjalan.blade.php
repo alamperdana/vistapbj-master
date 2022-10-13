@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
 		============================================ -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/admin/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/admin/favicon.e">
     <!-- Google Fonts
 		============================================ -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
@@ -191,9 +191,6 @@
 														</a>
                                                     <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
                                                         {{-- //nambah dari sini --}}
-                                                        <li>
-                                                            <a href="{{ route('profil', Auth::user()->id) }}">Profil</a></li>
-                                                        </li>
                                                         <li><span class="edu-icon edu-home-admin author-log-ic"></span>
                                                             @guest
                                                             @if (Route::has('login'))
@@ -318,8 +315,8 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="sparkline13-list">
                             <div class="sparkline13-hd">
-                            <div class="main-sparkline13-hd">
-                                    <h1>Tabel <span class="table-project-n">Paket</span> Berjalan</h1>
+                                <div class="main-sparkline13-hd">
+                                    <h1>Tabel <span class="table-project-n">Info</span> Penyedia</h1>
                                 </div>
                             </div>
                             <div class="sparkline13-graph">
@@ -341,30 +338,8 @@
                                     <table id="table-data" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
                                         data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
                                         <thead>
-                                            <tr>
-                                                <th>Edit</th>
-                                                <th>Hapus</th>
-                                                <th>Metode Paket</th>
-                                                <th>Tahun</th>
-                                                <th>Bulan</th>
-                                                <th>Kode Paket</th>
-                                                <th>Nama Paket</th>
-                                                <th>Pagu Paket</th>
-                                                <th>HPS Paket</th>
-                                                <th>Jenis Paket</th>
-                                                <th>Awal Pemilihan</th>
-                                                <th>Akhir Pemilihan</th>
-                                                <th>Awal Kontrak</th>
-                                                <th>Akhir Kontrak</th>
-                                                <th>Status Paket</th>
-                                                <th>SKP</th>
-                                                <th>NPWP Perusahaan</th>
-                                                <th>Pemilik Pekerjaan</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @foreach($data as $datas)
                                                 <tr>
+<<<<<<< HEAD
                                                     <td>
                                                         <button type="button" class="edit" value="{{$datas->kode_paket}}">Edit</button>
                                                     </td>
@@ -388,9 +363,58 @@
                                                     <td valign="top" class="text-center">{{ $datas->npwp_perusahaan }}</td>
                                                     <td valign="top" class="text-center">{{ $datas->nama_satker }}</td>
                                                     <td valign="top" class="text-center">{{ $datas->nama_perusahaan }}</td>
+=======
+                                                    <th>Edit</th>
+                                                    <th>Hapus</th>
+                                                    <th>Metode Paket</th>
+                                                    <th>Tahun</th>
+                                                    <th>Bulan</th>
+                                                    <th>Kode Paket</th>
+                                                    <th>Nama Paket</th>
+                                                    <th>Pagu Paket</th>
+                                                    <th>HPS Paket</th>
+                                                    <th>Jenis Paket</th>
+                                                    <th>Awal Pemilihan</th>
+                                                    <th>Akhir Pemilihan</th>
+                                                    <th>Awal Kontrak</th>
+                                                    <th>Akhir Kontrak</th>
+                                                    <th>Status Paket</th>
+                                                    <th>SKP</th>
+                                                    <th>Nama Perusahaan</th>
+                                                    <th>NPWP Perusahaan</th>
+                                                    <th>Pemilik Pekerjaan</th>
+>>>>>>> 6d869fd (kompi kia)
                                                 </tr>
-                                            @endforeach
-                                        </tbody>
+                                            </thead>
+                                            <tbody>
+                                                @foreach($data as $datas)
+                                                    <tr>
+                                                        <td>
+                                                            <button type="button" class="edit" value="{{$datas->kode_paket}}">Edit</button>
+                                                        </td>
+                                                        <td>
+                                                            <button type="button" class="hapus" value="{{$datas->kode_paket}}">Hapus</button>
+                                                        </td>
+                                                        <td valign="top" class="text-center">{{ $datas->metode_paket }}</td>
+                                                        <td valign="top" class="text-center">{{ $datas->tahun }}</td>
+                                                        <td valign="top" class="text-center">{{ $datas->bulan }}</td>
+                                                        <td valign="top" class="text-center">{{ $datas->kode_paket }}</td>
+                                                        <td valign="top" class="text-center">{{ $datas->nama_paket }}</td>
+                                                        <td valign="top" class="text-center">{{ $datas->pagu_paket }}</td>
+                                                        <td valign="top" class="text-center">{{ $datas->hps_paket }}</td>
+                                                        <td valign="top" class="text-center">{{ $datas->jenis_paket }}</td>
+                                                        <td valign="top" class="text-center">{{ $datas->awal_paket }}</td>
+                                                        <td valign="top" class="text-center">{{ $datas->akhir_paket }}</td>
+                                                        <td valign="top" class="text-center">{{ $datas->awal_kontrak_paket }}</td>
+                                                        <td valign="top" class="text-center">{{ $datas->akhir_kontrak_paket }}</td>
+                                                        <td valign="top" class="text-center">{{ $datas->paket_berjalan }}</td>
+                                                        <td valign="top" class="text-center">{{ $datas->skp}}</td>
+                                                        <td valign="top" class="text-center">{{ $datas->nama_perusahaan}}</td>
+                                                        <td valign="top" class="text-center">{{ $datas->npwp_perusahaan }}</td>
+                                                        <td valign="top" class="text-center">{{ $datas->nama_satker }}</td>
+                                                    </tr>
+                                                @endforeach
+                                            </tbody>
                                     </table>
                                 </div>
                             </div>
@@ -405,7 +429,7 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="footer-copy-right">
-                            <p>Copyright © 2022. PBJAP</a></p>
+                            <p>Copyright © 2022. PBJAP</p>
                         </div>
                     </div>
                 </div>
@@ -479,7 +503,7 @@
         <script src="{{url('js/admin/main.js')}}"></script>
         <!-- tawk chat JS
             ============================================ -->
-         <!-- tawk chat JS<script src="{{url('js/admin/tawk-chat.js')}}"></script>-->
+        <!--<script src="{{url('js/admin/tawk-chat.js')}}"></script>-->
 
     <script>
         // var Table = $("#table-data").DataTable({
@@ -544,7 +568,7 @@
             e.preventDefault();
             $.ajax({
                 type : 'GET',
-                url  : 'adminpaketerjalan/hapus/' + this.value,
+                url  : '/adminpaketerjalan/hapus/' + this.value,
                 success :  function(response){
                     alert("Data Berhasil Dihapus!");
                     location.reload();
@@ -554,7 +578,7 @@
                 }
             })
         });
-        
+
     </script>
 </body>
 

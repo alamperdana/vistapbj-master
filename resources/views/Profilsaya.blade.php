@@ -392,24 +392,47 @@
                                                         
                                                         <form id="formUpload">
                                                         @csrf
+
                                                         <div class="form-group">
+<<<<<<< HEAD
                                                         <input type="hidden" class="form-control" id="id" name="id">
+=======
+                                                        <input type="hidden" class="form-control" id="name" name="name">
+>>>>>>> 6d869fd (kompi kia)
                                                         </div>
+
                                                         <div class="form-group">
+<<<<<<< HEAD
                                                         <input type="text" class="form-control" id="name" name="name">
                                                         </div>
                                                         <div>
                                                         <input type="text" class="form-control" id="nip" name="nama_perusahaan" value="{{$data->nama_perusahaan}}" readonly>
+=======
+                                                            <input type="text" class="form-control" id="name" name="name">
+>>>>>>> 6d869fd (kompi kia)
                                                         </div>
+
+
+                                                        <div>
+                                                        <input type="text" class="form-control" id="nip" name="nama_perusahaan" value="{{$data->nama_perusahaan}}" readonly>
+                                                        </div>
+
+
                                                         <div class="form-group">
                                                             <input type="text" class="form-control" id="opd" name="opd" value="{{$data->opd}}">
                                                         </div>
+
+
                                                         <div class="form-group">
                                                             <input type="number" class="form-control" id="telepon" name="telepon" value="$data->telepon">
                                                         </div>
+
+
                                                         <div class="form-group">
                                                         <input type="text" class="form-control" id="email" name="email" value="$data->email">
                                                         </div>
+
+
                                                         <div class="file-upload-inner ts-forms">
                                                             <div class="input prepend-big-btn">
                                                                 <label class="icon-right" for="prepend-big-btn">
@@ -422,8 +445,9 @@
                                                                 <input type="text" id="prepend-big-btn" placeholder="no file selected">
                                                             </div>
                                                         </div>
+
                                                     </div>
-                                                </div> --}}
+                                                </div> 
                                                 <div class="row">
                                                     <div class="col-lg-12">
                                                         <div class="payment-adress mg-t-15">
