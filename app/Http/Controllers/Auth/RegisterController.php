@@ -83,7 +83,7 @@ class RegisterController extends Controller
             'telepon' => $data['telepon'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'status' => 0,
+            'status' => false,
             'avatar' => $filename == '' ? null : $filename,
         ];        
         //proses simpan data

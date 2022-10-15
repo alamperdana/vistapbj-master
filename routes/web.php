@@ -15,9 +15,7 @@ use App\Http\Controllers\userPaketerBerjalanController;
 use App\Http\Controllers\userInfoPenyediaController;
 use App\Http\Controllers\CariPenyediaController;
 use App\Http\Controllers\CariSkaSktController;
-
 use App\Http\Controllers\UserguideController;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -141,3 +139,14 @@ Route::post('/userpaketberjalan/import', [userPaketerBerjalanController::class, 
 Route::get('/userinfopenyedia', [userInfoPenyediaController::class, 'index'])->name('userinfopenyedia');
 Route::post('/userinfopenyedia/import', [userInfoPenyediaController::class, 'import']);
 
+//Info Tender
+Route::get('/tender/json', [\App\Http\Controllers\TenderController::class, 'data'])->name('tender.data');
+Route::get('/tender', [\App\Http\Controllers\TenderController::class, 'index'])->name('tender.index');
+
+//Info NonTender
+Route::get('/nontender/json', [\App\Http\Controllers\NonTenderController::class, 'data'])->name('nontender.data');
+Route::get('/nontender', [\App\Http\Controllers\NonTenderController::class, 'index'])->name('nontender.index');
+
+//Info Staf
+Route::get('/staf/json', [\App\Http\Controllers\StafController::class, 'data'])->name('staf.data');
+Route::get('/staf', [\App\Http\Controllers\StafController::class, 'index'])->name('staf.index');

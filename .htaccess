@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	#RewriteBase /
+	RewriteCond %{REQUEST_FILENAME} !-f
+	Rewriterule ^ public/index.php [QSA,L]
+	RewriteCond %{HTTP} off
+	Rewriterule ^.*$ http://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
