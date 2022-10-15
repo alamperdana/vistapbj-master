@@ -14,10 +14,9 @@ use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\userPaketerBerjalanController;
 use App\Http\Controllers\userInfoPenyediaController;
 use App\Http\Controllers\CariPenyediaController;
-<<<<<<< HEAD
-=======
+use App\Http\Controllers\CariSkaSktController;
+
 use App\Http\Controllers\UserguideController;
->>>>>>> 6d869fd (kompi kia)
 
 
 /*
@@ -86,6 +85,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('dashboardpaketuser/getdata/{tahun}', [dashboardPaketController::class, 'getdata3']);
+Route::get('dashboardpaketuser', [dashboardPaketController::class, 'index3'])->name('dashboardpaketuser');
+Route::get('/', function () {
+    return view('welcome');
+});
+
 //User Guide
 Route::get('/userguide', [UserguideController::class, 'index'])->name('userguide');
 Route::get('/downloaduserguide', [UserguideController::class, 'downloaduserguide'])->name('downloaduserguide');
@@ -93,7 +98,16 @@ Route::get('/downloaduserguide', [UserguideController::class, 'downloaduserguide
 //Profil Pengguna
 // Route::get('/profil', [ProfilController::class, 'index'])->name('profil');
 Route::get('/profil/{id}', [ProfilController::class, 'index'])->name('profil');
-Route::get('/editprofil/{id}', [ProfilController::class, 'index2'])->name('editprofil');
+// Route::get('/editprofil/{id}', [ProfilController::class, 'index2'])->name('editprofil');
+Route::post('/editprofil/store', [ProfilController::class, 'store'])->name('editprofil');
+
+//Profil Pengguna
+// Route::get('/profil', [ProfilController::class, 'index'])->name('profil');
+Route::get('/profilpengguna/{id}', [ProfilController::class, 'index3'])->name('profilpengguna');
+// Route::get('/editprofilpengguna/{id}', [ProfilController::class, 'index4'])->name('editprofilpengguna');
+Route::post('/editprofilpengguna/store', [ProfilController::class, 'store'])->name('editprofilpengguna');
+
+
 
 Route::get('/validate', function () {
     if(auth()->user()->role == 1) {
@@ -105,15 +119,15 @@ Route::get('/validate', function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Pencarian Penyedia terkait SKP
-Route::get('/caripenyedia', [App\Http\Controllers\CariPenyediaController::class, 'cari'])->name('caripenyedia');
-<<<<<<< HEAD
-=======
+Route::get('/caripenyedia', [CariPenyediaController::class, 'cari'])->name('caripenyedia');
+
+
 //Pencarian Penyedia terkait SKA SKT
-Route::get('/cariskaskt', [App\Http\Controllers\CariSkaSktController::class, 'cari'])->name('cariskaskt');
+Route::get('/cariskaskt', [CariSkaSktController::class, 'cari'])->name('cariskaskt');
 
 
 
->>>>>>> 6d869fd (kompi kia)
+
 
 //User
 // Route::get('/user', [usercontroller::class, 'index'])->middleware(['auth','isUser'])->name('user');

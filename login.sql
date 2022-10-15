@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 03 Okt 2022 pada 11.14
+-- Waktu pembuatan: 15 Okt 2022 pada 04.28
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -119,7 +119,7 @@ CREATE TABLE `paket_berjalan` (
 --
 
 INSERT INTO `paket_berjalan` (`metode_paket`, `tahun`, `bulan`, `kode_paket`, `nama_paket`, `pagu_paket`, `hps_paket`, `jenis_paket`, `awal_paket`, `akhir_paket`, `awal_kontrak_paket`, `akhir_kontrak_paket`, `paket_berjalan`, `skp`, `npwp_perusahaan`, `nama_satker`, `nama_perusahaan`) VALUES
-('Tender', '2022', '2', 2, 'Jl. H. Zainir Haviz', '4779047619', '999868068', 'Pekerjaan Konstruksi', '2022-08-27', '2022-08-29', '2022-09-01', '2022-10-01', NULL, NULL, '12.134.24-2.3456', 'DINAS PEKERJAAN UMUM DAN PENATAAN RUANG KOTA JAMBI', ''),
+(NULL, '2022', '2', 2, 'Jl. H. Zainir Haviz', '4779047619', '999868068', 'Pekerjaan Kontruksi', '2022-08-27', '2022-08-27', '2022-09-01', '2022-10-01', 0, 2, '12.134.24-2.3456', 'DINAS PEKERJAAN UMUM DAN PENATAAN RUANG KOTA JAMBI', 'zakiaaaaa'),
 ('Tender', '2022', '3', 3, 'Jl. H. Zainir Haviz', '4687619048', '999868068', 'Pekerjaan Konstruksi', '2022-08-27', '2022-08-29', '2022-09-01', '2022-10-01', NULL, NULL, '12.134.24-2.3456', 'DINAS PEKERJAAN UMUM DAN PENATAAN RUANG KOTA JAMBI', ''),
 ('Tender', '2022', '4', 4, 'Jl. H. Zainir Haviz', '4596190476', '999868068', 'Pekerjaan Konstruksi', '2022-08-27', '2022-08-29', '2022-09-01', '2022-10-01', NULL, NULL, '12.134.24-2.3456', 'DINAS PEKERJAAN UMUM DAN PENATAAN RUANG KOTA JAMBI', ''),
 ('Tender', '2022', '5', 5, 'Jl. H. Zainir Haviz', '4504761905', '999868068', 'Pekerjaan Konstruksi', '2022-08-27', '2022-08-29', '2022-09-01', '2022-10-01', NULL, NULL, '12.134.24-2.3456', 'DINAS PEKERJAAN UMUM DAN PENATAAN RUANG KOTA JAMBI', ''),
@@ -133,7 +133,6 @@ INSERT INTO `paket_berjalan` (`metode_paket`, `tahun`, `bulan`, `kode_paket`, `n
 ('Tender', '2022', '4', 40, 'Jl. H. Zainir Haviz', '1000000000', '999868068', 'Pekerjaan Konstruksi', '2022-08-27', '2022-08-29', '2022-09-01', '2022-10-01', NULL, NULL, '12.134.24-2.3456', 'DINAS PEKERJAAN UMUM DAN PENATAAN RUANG KOTA JAMBI', ''),
 ('Tender', '2022', '3', 46, 'n', '1000000000', '999868068', 'Pekerjaan Konstruksi', '2022-08-27', '2022-08-29', '2022-09-01', '2022-10-01', NULL, NULL, '12.134.24-2.3456', 'DINAS PEKERJAAN UMUM DAN PENATAAN RUANG KOTA JAMBI', ''),
 ('Tender', '2022', '5', 50, 'Jl. H. Zainir Haviz', '1000000000', '999868068', 'Pekerjaan Konstruksi', '2022-08-27', '2022-08-29', '2022-09-01', '2022-10-01', NULL, NULL, '12.134.24-2.3456', 'DINAS PEKERJAAN UMUM DAN PENATAAN RUANG KOTA JAMBI', ''),
-('Tender', '2022', '6', 60, 'Jl. H. Zainir Haviz', '1000000000', '999868068', 'Pekerjaan Konstruksi', '2022-08-27', '2022-08-29', '2022-09-01', '2022-10-01', NULL, NULL, '12.134.24-2.3456', 'DINAS PEKERJAAN UMUM DAN PENATAAN RUANG KOTA JAMBI', ''),
 ('Tender', '2022', '7', 70, 'Belanja Natura dan Pakan-Natura dan Pakan Lainnya', '1213333333', '359995680', 'Pengadaan Barang', '2022-08-27', '2022-08-29', '2022-09-01', '2022-10-01', NULL, NULL, '12.134.24-2.3424', 'DINAS PEMADAM KEBAKARAN DAN PENYELAMATAN KOTA JAMBI', ''),
 ('Tender', '2022', '8', 80, 'Jl. H. Zainir Haviz', '1304761905', '999868068', 'Pekerjaan Konstruksi', '2022-08-27', '2022-08-29', '2022-09-01', '2022-10-01', NULL, NULL, '12.134.24-2.3456', 'DINAS PEKERJAAN UMUM DAN PENATAAN RUANG KOTA JAMBI', ''),
 ('Tender', '2022', '9', 90, 'Jl. H. Zainir Haviz', '1396190476', '999868068', 'Pekerjaan Konstruksi', '2022-08-27', '2022-08-29', '2022-09-01', '2022-10-01', NULL, NULL, '12.134.24-2.3456', 'DINAS PEKERJAAN UMUM DAN PENATAAN RUANG KOTA JAMBI', ''),
@@ -183,7 +182,9 @@ INSERT INTO `paket_berjalan` (`metode_paket`, `tahun`, `bulan`, `kode_paket`, `n
 ('Tender', '2022', '1', 555, 'Belanja Natura dan Pakan-Natura dan Pakan Lainnya', '360000000', '359995680', 'Pengadaan Barang', '2022-08-27', '2022-08-29', '2022-09-01', '2022-10-01', NULL, NULL, '12.134.24-2.3424', 'DINAS PEMADAM KEBAKARAN DAN PENYELAMATAN KOTA JAMBI', ''),
 ('Tender', '2022', '1', 656, ',', '360000000', '359995680', 'Pengadaan Barang', '2022-08-27', '2022-08-29', '2022-09-01', '2022-10-01', NULL, NULL, '12.134.24-2.3424', 'DINAS PEMADAM KEBAKARAN DAN PENYELAMATAN KOTA JAMBI', ''),
 ('Tender', '2022', '3', 787, ',', '1000000000', '999868068', 'Pekerjaan Konstruksi', '2022-08-27', '2022-08-29', '2022-09-01', '2022-10-01', NULL, NULL, '12.134.24-2.3456', 'DINAS PEKERJAAN UMUM DAN PENATAAN RUANG KOTA JAMBI', ''),
-('Tender', '2022', '3', 8899, ',', '1000000000', '999868068', 'Pekerjaan Konstruksi', '2022-08-27', '2022-08-29', '2022-09-01', '2022-10-01', NULL, NULL, '12.134.24-2.3456', 'DINAS PEKERJAAN UMUM DAN PENATAAN RUANG KOTA JAMBI', '');
+('Tender', '2022', '3', 8899, ',', '1000000000', '999868068', 'Pekerjaan Konstruksi', '2022-08-27', '2022-08-29', '2022-09-01', '2022-10-01', NULL, NULL, '12.134.24-2.3456', 'DINAS PEKERJAAN UMUM DAN PENATAAN RUANG KOTA JAMBI', ''),
+('Tender', '2022', '1', 10796277, 'Belanja Natura dan Pakan-Natura dan Pakan Lainnya', '360000000', '359995680', 'Pengadaan Barang', '2022-08-27', '2022-08-29', '2022-09-01', '2022-10-01', 0, 10, '12.134.24-2.3424', 'DINAS PEMADAM KEBAKARAN DAN PENYELAMATAN KOTA JAMBI', 'kia'),
+('Tender', '2022', '3', 11847259, 'Jl. H. Zainir Haviz', '1000000000', '999868068', 'Pekerjaan Konstruksi', '2022-08-27', '2022-08-29', '2022-09-01', '2022-10-01', NULL, NULL, '12.134.24-2.3456', 'DINAS PEKERJAAN UMUM DAN PENATAAN RUANG KOTA JAMBI', 'amalia');
 
 -- --------------------------------------------------------
 
@@ -252,8 +253,8 @@ CREATE TABLE `perusahaan` (
 --
 
 INSERT INTO `perusahaan` (`id`, `nama_perusahaan`, `npwp_perusahaan`, `alamat_penyedia`, `email_penyedia`, `pengurus_penyedia`, `keuangan_penyedia`, `kapasitas_penyedia`, `saranaprasarana_penyedia`) VALUES
-(14, 'CV. NOVALINDO PUTRA', '02.537.306.9-331.000', 'Jl.Bangau I No.11 Rt.10/03 Kel.Tambak Sari Kec. Jambi Selatan', 'aldoputra6635@yahoo.co.id', 'ERMANSYAH, Amd (DIREKTUR)\nATTALA NOVALINDO (KOMENDITER)', '1000000000', 'MASNUBI (AHLI K3 KONSTRUKSI)\nZULKHA ADDHA (PETUGAS K3 KONSTRUKSI)\nALHUSRI YANTO (PENGAWAS PERPIPAAN AIR BERSIH)\nALHUSRI YANTO (Pelaksana (Pelaksana Bangunan Gedung/Pekerjaan Gedung) (TA022))\nLISMAN DARWIN\n', 'Pick Up (1) (Surat Perjanjian Sewa Peralatan)\nConcrete Mixer (1) (Faktur Pembelian)\nConcrete Vibrator (1) (Faktur Pembelian)\nWater Tank (1) (Faktur Pembelian)\nGenset (1) (Faktur Pembelian)\nMOTOR WALLES (1) (Surat Perjanjian Sewa Peralatan)\nDUMP TRUCK (2) (Surat Perjanjian Sewa Peralatan)\nPICK UP (1) (Surat Perjanjian Sewa Peralatan)\nCONCRETE VIBRATOR (1) (Faktur Pembelian)\nCONCRETE VIBRATOR (1) (Faktur Pembelian)\nCONCERE MIXER (1) (Faktur Pembelian)\n'),
-(18, 'CV. Maya Sari', '02.061.757.7-331.000', 'JL. PS. Sengeti Kab Muaro Jambi', 'mayasaricv@yahoo.co.id', 'MERWANTO (Wakil Direktur)\nJEMI PANDRA (Direktur)', '360000000', 'DADANG IRAWAN (Tenaga Terampil (Tukang Las Konstruksi Plat dan PIpa))\nENDANG SUFRIANI (Administrasi)\nMARITO NAINGGOLAN (Menager Pelaksana (Pelaksana Bangunan Gedung/Pekerjaan ', 'MESIN LAS LISTRIK (1) (Faktur Pembelian)\nPICK UP (1) (Surat Perjanjian Sewa Peralatan)\n');
+(18, 'CV. Maya Sari', '02.061.757.7-331.000', 'JL. PS. Sengeti Kab Muaro Jambi', 'mayasaricv@yahoo.co.id', 'MERWANTO (Wakil Direktur)\nJEMI PANDRA (Direktur)', '360000000', 'DADANG IRAWAN (Tenaga Terampil (Tukang Las Konstruksi Plat dan PIpa))\nENDANG SUFRIANI (Administrasi)\nMARITO NAINGGOLAN (Menager Pelaksana (Pelaksana Bangunan Gedung/Pekerjaan ', 'MESIN LAS LISTRIK (1) (Faktur Pembelian)\nPICK UP (1) (Surat Perjanjian Sewa Peralatan)\n'),
+(20, 'CV. NOVALINDO PUTRA', '02.537.306.9-331.000', 'Jl.Bangau I No.11 Rt.10/03 Kel.Tambak Sari Kec. Jambi Selatan', 'aldoputra6635@yahoo.co.id', 'ERMANSYAH, Amd (DIREKTUR)\nATTALA NOVALINDO (KOMENDITER)', '1000000000', 'MASNUBI (AHLI K3 KONSTRUKSI)\nZULKHA ADDHA (PETUGAS K3 KONSTRUKSI)\nALHUSRI YANTO (PENGAWAS PERPIPAAN AIR BERSIH)\nALHUSRI YANTO (Pelaksana (Pelaksana Bangunan Gedung/Pekerjaan Gedung) (TA022))\nLISMAN DARWIN\n', 'Pick Up (1) (Surat Perjanjian Sewa Peralatan)\nConcrete Mixer (1) (Faktur Pembelian)\nConcrete Vibrator (1) (Faktur Pembelian)\nWater Tank (1) (Faktur Pembelian)\nGenset (1) (Faktur Pembelian)\nMOTOR WALLES (1) (Surat Perjanjian Sewa Peralatan)\nDUMP TRUCK (2) (Surat Perjanjian Sewa Peralatan)\nPICK UP (1) (Surat Perjanjian Sewa Peralatan)\nCONCRETE VIBRATOR (1) (Faktur Pembelian)\nCONCRETE VIBRATOR (1) (Faktur Pembelian)\nCONCERE MIXER (1) (Faktur Pembelian)\n');
 
 -- --------------------------------------------------------
 
@@ -310,7 +311,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`, `role`, `dataupload`, `verified`, `status`, `nip`, `opd`, `telepon`, `avatar`) VALUES
-(3, 'zakia', 'zakia@gmail.com', NULL, '$2y$10$4td4wXdujRipUJIAkAe6yua4Vi9CdTCJvOmJ5ys4MN.dCg061Ymim', NULL, '2022-09-05 02:37:21', '2022-09-28 05:25:09', 1, '', 1, 0, 0, '', '', ''),
+(3, 'zakia', 'zakia@gmail.com', NULL, '$2y$10$4td4wXdujRipUJIAkAe6yua4Vi9CdTCJvOmJ5ys4MN.dCg061Ymim', NULL, '2022-09-05 02:37:21', '2022-10-06 19:25:43', 1, '', 1, 1, 0, '', '', ''),
 (4, 'Amalia', 'amalia@gmail.com', NULL, '$2y$10$PipdKYy20DFENpoP6zzvx.IMDZCRSACo6/hKdxH27CP8u5BNuJJz6', NULL, '2022-09-05 02:38:15', '2022-09-05 02:38:15', 0, '', 1, 1, 0, '', '', ''),
 (5, 'Perhitungan TKDN KONSTRUKSI nco.pdf', 'y_krisnadi@yahoo.co.id', NULL, '$2y$10$GqNrIwpbMxlNE.b1CLtMDOEH0pa9JSDsujCtdgTABr.7olXhrdqvq', NULL, '2022-09-08 00:25:21', '2022-09-08 00:25:21', 0, NULL, NULL, 0, 0, '', '', ''),
 (6, 'ook', 'krisnadi.hjm@gmail.com', NULL, '$2y$10$cPhEEk7splmRUOFcBvxi4eymr0Ygf6FrRLG4QJcgVsVITMOEPZmCm', NULL, '2022-09-08 00:28:51', '2022-09-08 00:28:51', 0, NULL, NULL, 0, 0, '', '', ''),
@@ -318,10 +319,16 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `re
 (8, 'zakia', 'zakiaamalia1029@gmail.com', NULL, '$2y$10$gOBkmApSl9nTfvRPSP6Mc.60ySueEdNKE5/JlovPNVswj5CCFaBk2', NULL, '2022-09-11 22:02:17', '2022-09-11 22:02:17', 0, NULL, NULL, 0, 0, '', '', ''),
 (9, 'zakia', 'zakiaa@gmail.com', NULL, '$2y$10$mHQh6uV4KndgZIqC51.hROR5ymWWz20.prxQ2hm.rHygcJvGo6Nwa', NULL, '2022-09-12 00:36:06', '2022-09-12 00:36:06', 0, NULL, NULL, 0, 0, '', '', ''),
 (10, 'amaliaa', 'amaliaa@gmail.com', NULL, '$2y$10$AkFLNowjqAuXdPd5nisDq.jNCT4tYLqusgrgfE41SttLCGU.L014u', NULL, '2022-09-12 00:36:37', '2022-09-12 00:36:37', 1, NULL, NULL, 1, 0, '', '', ''),
-(11, 'zakia', 'yourultifriend@gmail.com', NULL, '$2y$10$t81lMfyhE1aeL1hGfcRfyunDbuUH5gjPSuqokEOTwROm22Ddp5Rgy', 'gp4IaREWEjvtvlXQKq1wULOKFpZSrCGikseMZhZLfOJdzqnzC2qFtgGlZHJP', '2022-09-13 21:43:52', '2022-09-28 04:09:06', 1, NULL, 0, 1, 0, '', '', ''),
+(11, 'zakia', 'yourultifriend@gmail.com', NULL, '$2y$10$t81lMfyhE1aeL1hGfcRfyunDbuUH5gjPSuqokEOTwROm22Ddp5Rgy', '1MWgJcZm1UcW6vxRRKE91CrumkWb6f8hWMQL1jXwBGT46s6yrTuqa0WxDgVI', '2022-09-13 21:43:52', '2022-09-28 04:09:06', 1, NULL, 0, 1, 0, '', '', ''),
 (12, 'imelda', 'imelda@gmail.com', NULL, '$2y$10$koF3.g5ExL3rcXmKUPGpt.0.tSlLNY8gRrns7l.BzIJFTcAKGa5Q2', NULL, '2022-09-18 21:48:07', '2022-09-28 04:43:30', 0, NULL, 0, 0, 0, '', '', ''),
 (13, 'sdf', 'koreaa@gmail.com', NULL, '$2y$10$pAKtHSs/SKLIMzF6owJwyevZIemBt/P0sgtr7hORCSd3c/a0BfLFu', NULL, '2022-09-28 06:06:12', '2022-09-28 06:06:12', 0, NULL, 0, 0, 2233, 'dffgg', '32324', NULL),
-(14, '233234', 'korut@gmail.com', NULL, '$2y$10$Y7nusQz0kSXed2FmIBr.eOUyEyGoOLuxbWBMj8DzdveYaV7sXCoLS', NULL, '2022-09-28 06:06:49', '2022-09-28 06:06:49', 0, NULL, 0, 0, 43433, '4dff df', '343434', NULL);
+(14, '233234', 'korut@gmail.com', NULL, '$2y$10$Y7nusQz0kSXed2FmIBr.eOUyEyGoOLuxbWBMj8DzdveYaV7sXCoLS', NULL, '2022-09-28 06:06:49', '2022-09-28 06:06:49', 0, NULL, 0, 0, 43433, '4dff df', '343434', NULL),
+(15, 'www', 'betes@gmail.com', NULL, '$2y$10$BkjqqOWwEkqaaRgRaYkuuu6lRMf33A8kp7l/ihXW3ZOfRLhwp7Psm', NULL, '2022-10-03 22:23:03', '2022-10-03 22:23:03', 0, NULL, 0, 0, 1122, 'sddd', '23334', NULL),
+(16, 'zakia', 'battlecry@gmail.com', NULL, '$2y$10$QrOOjP8zSdQnBKCuAdjsb.JrtZcTOUZD10Yt3HEkJSSlLvS4.DxAe', NULL, '2022-10-06 04:16:39', '2022-10-06 04:17:10', 0, NULL, 0, 1, 1997, 'pbjap', '085213457984', NULL),
+(17, 'zakia', 'battlecryy@gmail.com', NULL, '$2y$10$r8qOPM783pL/pvyZVXFt2upmJJuoufYZhE4mpiflKjKkTIwaGGzay', NULL, '2022-10-12 20:47:07', '2022-10-12 20:47:07', 0, NULL, 0, 0, 1029, 'amalia', '1029', 'test minat bakat.pdf'),
+(18, 'amalia', 'merci@gmail.com', NULL, '$2y$10$lK2.xNWjdFjTeG4vZFNMre4F4e1zW9SdoFw/RjFe4IcB/J8.AQlZK', NULL, '2022-10-12 21:08:48', '2022-10-12 21:08:48', 0, NULL, 0, 0, 1245, 'chang', '123', 'userguidee.pdf'),
+(19, 'show me', 'letmedown@gmail.com', NULL, '$2y$10$ehWerCUVrqE3P9HxifqtuOwnkrkiZlMG27pZIKRFss.Avr/zmCk5e', NULL, '2022-10-12 21:32:34', '2022-10-13 03:09:38', 0, NULL, 0, 1, 123, 'eltme', '123', 'test.pdf'),
+(20, 'exo', 'exoplanet@gmail.com', NULL, '$2y$10$z5ULpl.LxbMWB0wOfCGdsOp4d/QqD2mnW/QI0R1qaDB4OrhBXL3qm', NULL, '2022-10-12 21:53:36', '2022-10-12 21:53:36', 0, NULL, 0, 0, 123, 'exo', '123', 'JCamScanner_09-13-2022_08.58.pdf');
 
 --
 -- Indexes for dumped tables
@@ -440,7 +447,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT untuk tabel `perusahaan`
 --
 ALTER TABLE `perusahaan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT untuk tabel `roles`
@@ -452,7 +459,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT untuk tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
+
 	<head>
 		<meta charset="UTF-8">
 		<!-- For IE -->
@@ -22,12 +22,12 @@
 		<link rel="stylesheet" type="text/css" href="assets/halamandepan/css/style.css">
 		<!-- responsive style sheet -->
 		<link rel="stylesheet" type="text/css" href="assets/halamandepan/css/responsive.css">
-=======
+
 <head>
     <!-- META INFO -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
->>>>>>> 6d869fd (kompi kia)
+
 
     <!-- PAGE TITLE -->
     <title>VISTAPBJ  | Home </title>
@@ -46,7 +46,7 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png">
 
-<<<<<<< HEAD
+
 			<!-- 
 			=============================================
 				Theme Header Two

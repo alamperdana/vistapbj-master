@@ -108,13 +108,6 @@ color: red;
                 <nav class="sidebar-nav left-sidebar-menu-pro">
                     <ul class="metismenu" id="menu1">
                         <li class="active">
-                            <a class="has-arrow" href="{{route('admin')}}">
-								   <!--<span class="educate-icon educate-home icon-wrap"></span>-->
-                                   <span class="mini-click-non"><i class="fa fa-address-card" aria-hidden="true"></i></i> Akun Pengguna</span>
-								</a>
-                            {{-- <ul class="submenu-angle" aria-expanded="true">
-                                <!-- <li><a title="Dashboard v.1" href="index.html"><span class="mini-sub-pro">Dashboard</span></a></li> -->
-                            </ul> --}}
                         </li>
 
                         <li>
@@ -122,9 +115,8 @@ color: red;
                                 <!--<span class="educate-icon educate-library icon-wrap"></span>-->
                                 <span class="mini-click-non"><i class="fa fa-file-text" aria-hidden="true"></i> Info Paket  </span></a>
                                 <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Add Library" href="{{route('tambahadminpaketberjalan')}}"><span class="mini-sub-pro"><i class="fa fa-plus-square" aria-hidden="true"></i> Tambah Data Info Paket Berjalan Manual</span></a></li>
-                                <li><a title="All Library" href="{{route('adminpaketberjalan')}}"><span class="mini-sub-pro"><i class="fa fa-folder-open" aria-hidden="true"></i> Data Info Paket </span></a></li>
-                                <li><a title="Add Library" href="{{route('dashboardpaket')}}"><span class="mini-sub-pro"><i class="fa fa-pie-chart" aria-hidden="true"></i> Chart</span></a></li>
+                                <li><a title="All Library" href="{{route('userpaketberjalan')}}"><span class="mini-sub-pro"><i class="fa fa-folder-open" aria-hidden="true"></i> Data Info Paket </span></a></li>
+                                <li><a title="Add Library" href="{{route('dashboardpaketuser')}}"><span class="mini-sub-pro"><i class="fa fa-pie-chart" aria-hidden="true"></i> Chart</span></a></li>
                             </ul>
                         </li>
                         <li>
@@ -132,8 +124,7 @@ color: red;
                                 <!--<span class="educate-icon educate-data-table icon-wrap"></span>-->
                                 <span class="mini-click-non"><i class="fa fa-file" aria-hidden="true"></i>Info Penyedia</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Data Table" href="{{route('adminpenyedia')}}"><span class="mini-sub-pro"><i class="fa fa-users" aria-hidden="true"></i>Data Info Penyedia</span></a></li>
-                                <li><a title="Data Table" href="{{route('tambahadmininfopenyedia')}}"><span class="mini-sub-pro"><i class="fa fa-keyboard-o" aria-hidden="true"></i>Tambah Data Info Penyedia Manual</span></a></li>
+                                <li><a title="Data Table" href="{{route('userinfopenyedia')}}"><span class="mini-sub-pro"><i class="fa fa-users" aria-hidden="true"></i>Data Info Penyedia</span></a></li>
                             </ul>
                         </li>    
                         <!--
@@ -325,6 +316,7 @@ color: red;
                 </div>
             </div>
         </div>
+
         <!-- Static Table Start -->
         <div class="single-pro-review-area mt-t-30 mg-b-15">
             <div class="container-fluid">
@@ -337,94 +329,12 @@ color: red;
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <div class="review-content-section">
                                                 <div class="row">
-                                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                        <div class="devit-card-custom">
-                                                            <form id="formUpload">
-                                                                @csrf
-                                                                <div class="form-group">
-                                                                    <h4>Kode Paket</h4>
-                                                                    <input type="text" class="form-control" id="kode_paket" name="kode_paket">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <h4>Metode Paket</h4>
-                                                                    <input type="text" class="form-control" id="metode_paket" name="metode_paket">
-                                                                 </div>
-                                                                <div class="form-group">
-                                                                  <h4>Nama Satuan Kerja</h4>
-                                                                  <input type="text" class="form-control" id="nama_satker" name="nama_satker">
-                                                               </div>
-                                                                <div class="form-group">
-                                                                  <h4>Nama Paket</h4>
-                                                                  <input type="text" class="form-control" id="nama_paket" name="nama_paket">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <h4>Jenis Paket</h4>
-                                                                    <select id="jenis_paket" name="jenis_paket" class="form-control">
-                                                                        <option value="Pengadaan Barang">Pengadaan Barang</option>
-                                                                        <option value="Pekerjaan Kontruksi">Pekerjaan Konstruksi</option>
-                                                                        <option value="Pekerjaan Konstruksi Terintegrasi">Pekerjaan Konstruksi Terintegrasi</option>
-                                                                        <option value="Jasa Konsultansi Badan Usaha Non Konstruksi">Jasa Konsultansi Badan Usaha Non Konstruksi</option>
-                                                                        <option value="Jasa Konsultansi Badan Usaha Konstruksi">Jasa Konsultansi Badan Usaha Konstruksi</option>
-                                                                        <option value="Jasa Konsultansi Perorangan Non Konstruksi">Jasa Konsultansi Perorangan Non Konstruksi</option>
-                                                                        <option value="Jasa Konsultansi Perorangan Konstruksi">Jasa Konsultansi Perorangan Konstruksi</option>
-                                                                        <option value="Jasa Lainnya">Jasa Lainnya</option>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="form-group">
-                                                                  <h4>Tahun</h4>
-                                                                  <input type="number" class="form-control" id="tahun" name="tahun">
-                                                              </div>
-                                                              <div class="form-group">
-                                                                <h4>Bulan</h4>
-                                                                <input type="number" class="form-control" id="bulan" name="bulan">
-                                                            </div>
-                                                                <div class="form-group">
-                                                                    <h4>Pagu Paket</h4>
-                                                                    <input type="number" class="form-control" id="pagu_paket" name="pagu_paket">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                  <h4>HPS Paket</h4>
-                                                                  <input type="number" class="form-control" id="hps_paket" name="hps_paket">
-                                                              </div>
-                                                              <div class="form-group">
-                                                                <h4>Awal Pemilihan</h4>
-                                                                <input type="date" class="form-control" id="awal_paket" name="awal_paket">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <h4>Akhir Pemilihan</h4>
-                                                                <input type="date" class="form-control" id="akhir_paket" name="akhir_paket">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <h4>Awal Kontrak</h4>
-                                                                <input type="date" class="form-control" id="awal_kontrak_paket" name="awal_kontrak_paket">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <h4>Akhir Kontrak</h4>
-                                                                <input type="date" class="form-control" id="akhir_kontrak_paket" name="akhir_kontrak_paket"">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <h4>Nama Perusahaan</h4>
-                                                                <input type="text" class="form-control" id="nama_perusahaan" name="nama_peerusahaan">
-                                                            </div>
-                                                                <div class="form-group">
-                                                                    <h4>NPWP Perusahaan</h4>
-                                                                    <input type="text" class="form-control" id="npwp_perusahaan" name="npwp_perusahaan">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                  <h4>SKP Perusahaan</h4>
-                                                                  <input type="number" class="form-control" id="skp" name="skp">
-                                                              </div>
-                                                                <div class="form-group">
-                                                                    <h4>Paket Berjalan</h4>
-                                                                    <select id="paket_berjalan" name="paket_berjalan" class="form-control">
-                                                                        <option value="0">Selesai</option>
-                                                                        <option value="1">Berjalan</option>
-                                                                    </select>
-                                                                </div>
-                                                                <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
-                                                            </form>
-                                                        </div>
-                                                    </div>
+                                                  <select name="tahun" id="tahun" class="form-control">
+                                                    <option value="2022">2022</option>
+                                                    <option value="2021">2021</option>
+                                                  </select>
+                                                    <div class="chart1" style="height:500px"></div>
+                                                    <div class="chart2" style="height:500px"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -513,36 +423,207 @@ color: red;
     <script src="{{url('js/admin/plugins.js')}}"></script>
     <!-- main JS
 		============================================ -->
-    <script src="{{url('js/admin/main.js')}}"></script>
+    <!--<script src="{{url('js/admin/main.js')}}"></script>-->
     <!-- tawk chat JS
 		============================================ -->
-    <!--
-    <script src="{{url('js/admin/tawk-chat.js')}}"></script>-->
-
+    <script src="{{url('js/admin/tawk-chat.js')}}"></script>
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
     <script>
+          $.ajax({
+            type: 'GET',
+            url: "dashboardpaket/getdata/0",
+            success: function (response) {
+                let data_prepare = [];
+                for (const i in response.data) {
+                    let current = response.data[i];
+                    data_prepare.push({
+                        paket_berjalan: current.paket_berjalan,
+                        total: current.total
+                    });
+                }
 
-          $('#formUpload').on('submit', function(event){
-            event.preventDefault();
-            var datas = new FormData(this);
-                $.ajax({
-                    url: '/adminpaketerjalan/tambah',
-                    data: datas,
-                    cache: false,
-                    contentType: false,
-                    processData: false,
-                    type: 'POST',
-                    method: 'POST',
-                    dataType: 'json',
-                    success: function(){
-                        // Table.ajax.reload(null, false);
-                        alert("berhasil");
-                        location.reload();
-                    },
-                    error: function(xhr){
-                        alert("gagal");
-                    },
-            });
+                let data_prepare2 = [];
+                for (const i in response.data2) {
+                    let current = response.data2[i];
+                    data_prepare2.push({
+                        jenis_paket: current.jenis_paket,
+                        total: current.total
+                    });
+                }
+                barchart('chart1', data_prepare)
+                barchart2('chart2', data_prepare2)
+            },
+            error: function (xhr) {
+                if (xhr.status == 401) {
+                    logout();
+                }
+            }
         });
+
+      $('#tahun').change(function(){
+        $.ajax({
+            type: 'GET',
+            url: "dashboardpaket/getdata/" + $('#tahun').val(),
+            success: function (response) {
+                let data_prepare = [];
+                for (const i in response.data) {
+                    let current = response.data[i];
+                    data_prepare.push({
+                        paket_berjalan: current.paket_berjalan,
+                        total: current.total
+                    });
+                }
+
+                let data_prepare2 = [];
+                for (const i in response.data2) {
+                    let current = response.data2[i];
+                    data_prepare2.push({
+                        jenis_paket: current.jenis_paket,
+                        total: current.total
+                    });
+                }
+                barchart('chart1', data_prepare)
+                barchart2('chart2', data_prepare2)
+            },
+            error: function (xhr) {
+                if (xhr.status == 401) {
+                    logout();
+                }
+            }
+        });
+      });
+        
+        function barchart(div, data) {
+            am4core.ready(function () {
+                // Themes begin
+                am4core.useTheme(am4themes_animated);
+                am4core.addLicense("ch-custom-attribution");
+
+                // Themes end
+
+                // Create chart instance
+                var chart = am4core.create(div, am4charts.XYChart);
+                chart.scrollbarX = new am4core.Scrollbar();
+
+                // Add data
+                chart.data = data
+
+                // Create axes
+                var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+                categoryAxis.dataFields.category = "paket_berjalan";
+                categoryAxis.renderer.grid.template.location = 0;
+                categoryAxis.renderer.minGridDistance = 30;
+                categoryAxis.renderer.labels.template.horizontalCenter = "right";
+                categoryAxis.renderer.labels.template.verticalCenter = "middle";
+                categoryAxis.renderer.labels.template.rotation = 310;
+                categoryAxis.tooltip.disabled = true;
+                categoryAxis.renderer.minHeight = 110;
+                categoryAxis.title.text = 'Paket Berjalan';
+                categoryAxis.title.fontSize = 20;
+                categoryAxis.title.fontWeight = 500;
+
+                var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+                valueAxis.renderer.minWidth = 50;
+                valueAxis.title.text = 'Total';
+                valueAxis.title.fontSize = 20;
+                valueAxis.title.fontWeight = 500;
+
+                // Create series
+                var series = chart.series.push(new am4charts.ColumnSeries());
+                series.sequencedInterpolation = true;
+                series.dataFields.valueY = "total";
+                series.dataFields.categoryX = "paket_berjalan";
+                series.tooltipText = "[{categoryX}: bold]{valueY}[/]";
+                series.columns.template.strokeWidth = 0;
+
+                series.tooltip.pointerOrientation = "vertical";
+
+                series.columns.template.column.cornerRadiusTopLeft = 10;
+                series.columns.template.column.cornerRadiusTopRight = 10;
+                series.columns.template.column.fillOpacity = 0.8;
+
+                // on hover, make corner radiuses bigger
+                var hoverState = series.columns.template.column.states.create("hover");
+                hoverState.properties.cornerRadiusTopLeft = 0;
+                hoverState.properties.cornerRadiusTopRight = 0;
+                hoverState.properties.fillOpacity = 1;
+
+                series.columns.template.adapter.add("fill", function (fill, target) {
+                    return chart.colors.getIndex(target.dataItem.index);
+                });
+
+                // Cursor
+                chart.cursor = new am4charts.XYCursor();
+
+            }); // end am4core.ready()
+        }
+
+        function barchart2(div, data) {
+            am4core.ready(function () {
+                // Themes begin
+                am4core.useTheme(am4themes_animated);
+                am4core.addLicense("ch-custom-attribution");
+
+                // Themes end
+
+                // Create chart instance
+                var chart = am4core.create(div, am4charts.XYChart);
+                chart.scrollbarX = new am4core.Scrollbar();
+
+                // Add data
+                chart.data = data
+
+                // Create axes
+                var categoryAxis = chart.xAxes.push(new am4charts.CategoryAxis());
+                categoryAxis.dataFields.category = "jenis_paket";
+                categoryAxis.renderer.grid.template.location = 0;
+                categoryAxis.renderer.minGridDistance = 30;
+                categoryAxis.renderer.labels.template.horizontalCenter = "right";
+                categoryAxis.renderer.labels.template.verticalCenter = "middle";
+                categoryAxis.renderer.labels.template.rotation = 310;
+                categoryAxis.tooltip.disabled = true;
+                categoryAxis.renderer.minHeight = 110;
+                categoryAxis.title.text = 'Jenis Paket';
+                categoryAxis.title.fontSize = 20;
+                categoryAxis.title.fontWeight = 500;
+
+                var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+                valueAxis.renderer.minWidth = 50;
+                valueAxis.title.text = 'Total';
+                valueAxis.title.fontSize = 20;
+                valueAxis.title.fontWeight = 500;
+
+                // Create series
+                var series = chart.series.push(new am4charts.ColumnSeries());
+                series.sequencedInterpolation = true;
+                series.dataFields.valueY = "total";
+                series.dataFields.categoryX = "jenis_paket";
+                series.tooltipText = "[{categoryX}: bold]{valueY}[/]";
+                series.columns.template.strokeWidth = 0;
+
+                series.tooltip.pointerOrientation = "vertical";
+
+                series.columns.template.column.cornerRadiusTopLeft = 10;
+                series.columns.template.column.cornerRadiusTopRight = 10;
+                series.columns.template.column.fillOpacity = 0.8;
+
+                // on hover, make corner radiuses bigger
+                var hoverState = series.columns.template.column.states.create("hover");
+                hoverState.properties.cornerRadiusTopLeft = 0;
+                hoverState.properties.cornerRadiusTopRight = 0;
+                hoverState.properties.fillOpacity = 1;
+
+                series.columns.template.adapter.add("fill", function (fill, target) {
+                    return chart.colors.getIndex(target.dataItem.index);
+                });
+
+                // Cursor
+                chart.cursor = new am4charts.XYCursor();
+
+            }); // end am4core.ready()
+        }
     </script>
 </body>
 

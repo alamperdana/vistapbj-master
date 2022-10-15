@@ -1,45 +1,29 @@
 <?php
 
 namespace App\Http\Controllers;
-<<<<<<< HEAD
 use DB;
 use Illuminate\Http\Request;
-=======
-//use DB;
-use Illuminate\Http\Request;
 use App\Models\PaketBerjalan;
->>>>>>> 6d869fd (kompi kia)
-
 class CariPenyediaController extends Controller
 {
     public function cari (Request $request) 
-    {
-<<<<<<< HEAD
-        $cari = $request->cari;
- 
+    {    
+	
     	// mengambil data dari table 
-		$paket = DB::table('paket_berjalan')
-		->where('npwp_perusahaan ','like',"%".$cari."%")
-		->paginate();
- 
-    		// mengirim data pegawai ke view index
-		return view('searching',['pakpet' => $paket]);
-=======
-    	// mengambil data dari table 
-		$data = PaketBerjalan::where('npwp_perusahaan', ($request->cari ?? false) )
-								->orWhere('nama_perusahaan','like','%'($request->cari ?? false) )
-								->paginate(3)->withQueryString();    
-		// dd($data);
+		$data = PaketBerjalan::Where('npwp_perusahaan', ($request->cari ?? false))
+				// ->orWhere('nama_perusahaan','like','%'($request->cari ?? false))->paginate(100);
+				//->orWhere('npwp_perusahaan', 'like', '%'.$request->cari.'%')->paginate(100);    
+		//dd($data);
     	// mengirim data pegawai ke view index
+		->paginate(100);    
 		return view('searchingpaket', compact(['data']));
- 
-    	// // mengambil data dari table 
-		// $paket = DB::table('paket_berjalan')
-		// ->where('npwp_perusahaan ','like',"%".$cari."%")
-		// ->paginate();
- 
-    	// 	// mengirim data pegawai ke view index
-		// return view('searching',['pakpet' => $paket]);
->>>>>>> 6d869fd (kompi kia)
+
+		// $data = PaketBerjalan::where('npwp_perusahaan', ($request->cari ?? false) )
+		// //->orWhere('nama_perusahaan','like','%'($request->cari ?? false) )
+		// //->orWhere('nama_perusahaan', 'like', '%'.$request->cari.'%')
+		// ->paginate(3)->withQueryString();
+		// // //dd($data);
+		// // // mengirim data pegawai ke view index
+		// return view('searchingpaket', compact(['data']));
     }
 }

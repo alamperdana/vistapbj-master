@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title> Admin | Informasi Data Paket</title>
+    <title> Admin | Informasi Akun Pengguna</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
 		============================================ -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/admin/favicon.e">
+    <link rel="shortcut icon" type="image/x-icon" href="img/admin/favicon.ico">
     <!-- Google Fonts
 		============================================ -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
@@ -72,6 +72,12 @@
     <link rel="stylesheet" href="{{url('css/admin/responsive.css')}}">
     <!-- modernizr JS
 		============================================ -->
+    
+    <!-- icon glykon pagination-->
+    <link rel="stylesheet" href="{{url('assets/depan/plugins/bootstrap/css/bootstrap.css')}}">
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="{{url('js/admin/vendor/modernizr-283.min.js')}}"></script>
 
     <script src="{{url('js/jquery.dataTables.min.js')}}" type="text/javascript"></script>
@@ -79,6 +85,15 @@
 
     </head>
 <body>
+
+<style>
+.heading:hover {
+color: red;
+}
+.a{
+    background-color: red;
+}
+</style>
     <!--[if lt IE 8]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
@@ -93,33 +108,32 @@
                 <nav class="sidebar-nav left-sidebar-menu-pro">
                     <ul class="metismenu" id="menu1">
                         <li class="active">
-                            <a class="has-arrow" href="index.html">
+                            <a class="has-arrow" href="{{route('admin')}}">
 								   <!--<span class="educate-icon educate-home icon-wrap"></span>-->
-
-								   <span class="mini-click-non">Home</span>
+                                   <span class="mini-click-non"><i class="fa fa-address-card" aria-hidden="true"></i></i> Akun Pengguna</span>
 								</a>
-                            <ul class="submenu-angle" aria-expanded="true">
+                            {{-- <ul class="submenu-angle" aria-expanded="true">
                                 <!-- <li><a title="Dashboard v.1" href="index.html"><span class="mini-sub-pro">Dashboard</span></a></li> -->
-                            </ul>
+                            </ul> --}}
                         </li>
 
                         <li>
                             <a class="has-arrow" href="all-courses.html" aria-expanded="false">
                                 <!--<span class="educate-icon educate-library icon-wrap"></span>-->
-                                <span class="mini-click-non">Info Paket  </span></a>
+                                <span class="mini-click-non"><i class="fa fa-file-text" aria-hidden="true"></i> Info Paket  </span></a>
                                 <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Add Library" href="{{route('tambahadminpaketberjalan')}}"><span class="mini-sub-pro">Tambah Data Info Paket Berjalan Manual</span></a></li>
-                                <li><a title="All Library" href="{{route('adminpaketberjalan')}}"><span class="mini-sub-pro">Data Info Paket </span></a></li>
-                                <li><a title="Add Library" href="{{route('dashboardpaket')}}"><span class="mini-sub-pro">Chart</span></a></li>
+                                <li><a title="Add Library" href="{{route('tambahadminpaketberjalan')}}"><span class="mini-sub-pro"><i class="fa fa-plus-square" aria-hidden="true"></i> Tambah Data Info Paket Berjalan Manual</span></a></li>
+                                <li><a title="All Library" href="{{route('adminpaketberjalan')}}"><span class="mini-sub-pro"><i class="fa fa-folder-open" aria-hidden="true"></i> Data Info Paket </span></a></li>
+                                <li><a title="Add Library" href="{{route('dashboardpaket')}}"><span class="mini-sub-pro"><i class="fa fa-pie-chart" aria-hidden="true"></i> Chart</span></a></li>
                             </ul>
                         </li>
                         <li>
                             <a class="has-arrow" href="mailbox.html" aria-expanded="false">
                                 <!--<span class="educate-icon educate-data-table icon-wrap"></span>-->
-                                <span class="mini-click-non">Info Penyedia</span></a>
+                                <span class="mini-click-non"><i class="fa fa-file" aria-hidden="true"></i>Info Penyedia</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Data Table" href="{{route('adminpenyedia')}}"><span class="mini-sub-pro">Data Info Penyedia</span></a></li>
-                                <li><a title="Data Table" href="{{route('tambahadmininfopenyedia')}}"><span class="mini-sub-pro">Tambah Data Info Penyedia Manual</span></a></li>
+                                <li><a title="Data Table" href="{{route('adminpenyedia')}}"><span class="mini-sub-pro"><i class="fa fa-users" aria-hidden="true"></i>Data Info Penyedia</span></a></li>
+                                <li><a title="Data Table" href="{{route('tambahadmininfopenyedia')}}"><span class="mini-sub-pro"><i class="fa fa-keyboard-o" aria-hidden="true"></i>Tambah Data Info Penyedia Manual</span></a></li>
                             </ul>
                         </li>    
                         <!--
@@ -191,6 +205,9 @@
 														</a>
                                                     <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
                                                         {{-- //nambah dari sini --}}
+                                                        <li>
+                                                            <a href="{{ route('profil', Auth::user()->id) }}">Profil</a></li>
+                                                        </li>
                                                         <li><span class="edu-icon edu-home-admin author-log-ic"></span>
                                                             @guest
                                                             @if (Route::has('login'))

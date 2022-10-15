@@ -72,6 +72,12 @@
     <link rel="stylesheet" href="{{url('css/admin/responsive.css')}}">
     <!-- modernizr JS
 		============================================ -->
+    
+    <!-- icon glykon pagination-->
+    <link rel="stylesheet" href="{{url('assets/depan/plugins/bootstrap/css/bootstrap.css')}}">
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="{{url('js/admin/vendor/modernizr-283.min.js')}}"></script>
 
     <script src="{{url('js/jquery.dataTables.min.js')}}" type="text/javascript"></script>
@@ -102,31 +108,23 @@ color: red;
                 <nav class="sidebar-nav left-sidebar-menu-pro">
                     <ul class="metismenu" id="menu1">
                         <li class="active">
-                            <a class="has-arrow" href="index.html">
-								   <!--<span class="educate-icon educate-home icon-wrap"></span>-->
-
-								   <span class="mini-click-non">Home</span>
-								</a>
-                            <ul class="submenu-angle" aria-expanded="true">
-                                <!-- <li><a title="Dashboard v.1" href="index.html"><span class="mini-sub-pro">Dashboard</span></a></li> -->
-                            </ul>
                         </li>
 
                         <li>
                             <a class="has-arrow" href="all-courses.html" aria-expanded="false">
                                 <!--<span class="educate-icon educate-library icon-wrap"></span>-->
-                                <span class="mini-click-non">Info Paket  </span></a>
+                                <span class="mini-click-non"><i class="fa fa-file-text" aria-hidden="true"></i> Info Paket  </span></a>
                                 <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="All Library" href="{{route('userpaketberjalan')}}"><span class="mini-sub-pro">Data Info Paket </span></a></li>
-                                <li><a title="Add Library" href="{{route('dashboardpaket')}}"><span class="mini-sub-pro">Chart</span></a></li>
+                                <li><a title="All Library" href="{{route('userpaketberjalan')}}"><span class="mini-sub-pro"><i class="fa fa-folder-open" aria-hidden="true"></i> Data Info Paket </span></a></li>
+                                <li><a title="Add Library" href="{{route('dashboardpaketuser')}}"><span class="mini-sub-pro"><i class="fa fa-pie-chart" aria-hidden="true"></i> Chart</span></a></li>
                             </ul>
                         </li>
                         <li>
                             <a class="has-arrow" href="mailbox.html" aria-expanded="false">
                                 <!--<span class="educate-icon educate-data-table icon-wrap"></span>-->
-                                <span class="mini-click-non">Info Penyedia</span></a>
+                                <span class="mini-click-non"><i class="fa fa-file" aria-hidden="true"></i>Info Penyedia</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Data Table" href="{{route('userinfopenyedia')}}"><span class="mini-sub-pro">Data Info Penyedia</span></a></li>
+                                <li><a title="Data Table" href="{{route('userinfopenyedia')}}"><span class="mini-sub-pro"><i class="fa fa-users" aria-hidden="true"></i>Data Info Penyedia</span></a></li>
                             </ul>
                         </li>    
                         <!--
@@ -199,7 +197,7 @@ color: red;
                                                     <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
                                                         {{-- //nambah dari sini --}}
                                                         <li>
-                                                            <a href="{{ route('profil', Auth::user()->id) }}">Profil</a></li>
+                                                            <a href="{{ route('profilpengguna', Auth::user()->id) }}">Profil</a></li>
                                                         </li>
                                                         <li><span class="edu-icon edu-home-admin author-log-ic"></span>
                                                             @guest

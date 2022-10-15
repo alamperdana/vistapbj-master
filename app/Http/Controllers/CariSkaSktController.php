@@ -11,8 +11,9 @@ class CariSkaSktController extends Controller
     {
     	// mengambil data dari table 
 		$data = InfoPenyedia::where('npwp_perusahaan', ($request->cari ?? false) )
-								->orWhere('nama_perusahaan','like','%'($request->cari ?? false) )
-								->paginate(3)->withQueryString();    
+								// ->orWhere('nama_perusahaan','like','%'($request->cari ?? false) )
+								// ->orWhere('nama_perusahaan', 'like', '%'.$request->cari.'%')
+								->paginate(100);    
 		// dd($data);
     	// mengirim data pegawai ke view index
 		return view('searchingskaskt', compact(['data']));

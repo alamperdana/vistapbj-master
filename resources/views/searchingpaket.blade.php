@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title> Admin | Informasi Data Paket</title>
+    <title> Admin | Informasi Akun Pengguna</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -72,6 +72,12 @@
     <link rel="stylesheet" href="{{url('css/admin/responsive.css')}}">
     <!-- modernizr JS
 		============================================ -->
+    
+    <!-- icon glykon pagination-->
+    <link rel="stylesheet" href="{{url('assets/depan/plugins/bootstrap/css/bootstrap.css')}}">
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="{{url('js/admin/vendor/modernizr-283.min.js')}}"></script>
 
     <script src="{{url('js/jquery.dataTables.min.js')}}" type="text/javascript"></script>
@@ -79,6 +85,15 @@
 
     </head>
 <body>
+
+<style>
+.heading:hover {
+color: red;
+}
+.a{
+    background-color: red;
+}
+</style>
     <!--[if lt IE 8]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
@@ -93,33 +108,42 @@
                 <nav class="sidebar-nav left-sidebar-menu-pro">
                     <ul class="metismenu" id="menu1">
                         <li class="active">
-                            <a class="has-arrow" href="index.html">
+                            <a class="has-arrow" href="{{route('admin')}}">
 								   <!--<span class="educate-icon educate-home icon-wrap"></span>-->
-
-								   <span class="mini-click-non">Home</span>
+                                   <span class="mini-click-non"><i class="fa fa-address-card" aria-hidden="true"></i></i> Akun Pengguna</span>
 								</a>
-                            <ul class="submenu-angle" aria-expanded="true">
+                            {{-- <ul class="submenu-angle" aria-expanded="true">
                                 <!-- <li><a title="Dashboard v.1" href="index.html"><span class="mini-sub-pro">Dashboard</span></a></li> -->
-                            </ul>
+                            </ul> --}}
+
+                            <a class="has-arrow" href="{{route('caripenyedia')}}">
+                                <!--<span class="educate-icon educate-home icon-wrap"></span>-->
+                                <span class="mini-click-non"><i class="fa fa-search" aria-hidden="true"></i>  <i class="fa fa-file-text" aria-hidden="true"></i> Cari Penyedia</span>
+                             </a>
+
+                             <a class="has-arrow" href="{{route('cariskaskt')}}">
+                                <!--<span class="educate-icon educate-home icon-wrap"></span>-->
+                                <span class="mini-click-non"><i class="fa fa-search" aria-hidden="true"></i>  <i class="fa fa-file" aria-hidden="true"></i> Akun SKA/SKT</span>
+                             </a>
                         </li>
 
                         <li>
                             <a class="has-arrow" href="all-courses.html" aria-expanded="false">
                                 <!--<span class="educate-icon educate-library icon-wrap"></span>-->
-                                <span class="mini-click-non">Info Paket  </span></a>
+                                <span class="mini-click-non"><i class="fa fa-file-text" aria-hidden="true"></i> Info Paket  </span></a>
                                 <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Add Library" href="{{route('tambahadminpaketberjalan')}}"><span class="mini-sub-pro">Tambah Data Info Paket Berjalan Manual</span></a></li>
-                                <li><a title="All Library" href="{{route('adminpaketberjalan')}}"><span class="mini-sub-pro">Data Info Paket </span></a></li>
-                                <li><a title="Add Library" href="{{route('dashboardpaket')}}"><span class="mini-sub-pro">Chart</span></a></li>
+                                <li><a title="Add Library" href="{{route('tambahadminpaketberjalan')}}"><span class="mini-sub-pro"><i class="fa fa-plus-square" aria-hidden="true"></i> Tambah Data Info Paket Berjalan Manual</span></a></li>
+                                <li><a title="All Library" href="{{route('adminpaketberjalan')}}"><span class="mini-sub-pro"><i class="fa fa-folder-open" aria-hidden="true"></i> Data Semua Info Paket </span></a></li>
+                                <li><a title="Add Library" href="{{route('dashboardpaket')}}"><span class="mini-sub-pro"><i class="fa fa-pie-chart" aria-hidden="true"></i> Chart</span></a></li>
                             </ul>
                         </li>
                         <li>
                             <a class="has-arrow" href="mailbox.html" aria-expanded="false">
                                 <!--<span class="educate-icon educate-data-table icon-wrap"></span>-->
-                                <span class="mini-click-non">Info Penyedia</span></a>
+                                <span class="mini-click-non"><i class="fa fa-file" aria-hidden="true"></i>Info Penyedia</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Data Table" href="{{route('adminpenyedia')}}"><span class="mini-sub-pro">Data Info Penyedia</span></a></li>
-                                <li><a title="Data Table" href="{{route('tambahadmininfopenyedia')}}"><span class="mini-sub-pro">Tambah Data Info Penyedia Manual</span></a></li>
+                                <li><a title="Data Table" href="{{route('adminpenyedia')}}"><span class="mini-sub-pro"><i class="fa fa-users" aria-hidden="true"></i>Data Semua Info Penyedia</span></a></li>
+                                <li><a title="Data Table" href="{{route('tambahadmininfopenyedia')}}"><span class="mini-sub-pro"><i class="fa fa-keyboard-o" aria-hidden="true"></i>Tambah Data Info Penyedia Manual</span></a></li>
                             </ul>
                         </li>    
                         <!--
@@ -134,6 +158,7 @@
             </div>
         </nav>
     </div>
+
     <!-- End Left menu area -->
     <!-- Start Welcome area -->
     <div class="all-content-wrapper">
@@ -183,7 +208,7 @@
                                     <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                                         <div class="header-right-info">
                                             <ul class="nav navbar-nav mai-top-nav header-right-menu">
-                                                <li class="nav-item">
+                                            <li class="nav-item">
                                                     <a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="nav-link dropdown-toggle">
 															<img src="img/admin/product/pro4.jpg" alt="" />
 															<span class="admin-name">{{ Auth::user()->name }}</span>
@@ -193,7 +218,7 @@
                                                         {{-- //nambah dari sini --}}
                                                         <li>
                                                             <a href="{{ route('profil', Auth::user()->id) }}">Profil</a></li>
-                                                        </li>
+                                                        </li>  
                                                         <li><span class="edu-icon edu-home-admin author-log-ic"></span>
                                                             @guest
                                                             @if (Route::has('login'))
@@ -318,8 +343,8 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="sparkline13-list">
                             <div class="sparkline13-hd">
-                                <div class="main-sparkline13-hd">
-                                    <h1>Tabel <span class="table-project-n">Paket</span> Penyedia</h1>
+                            <div class="main-sparkline13-hd">
+                                    <h1>Tabel <span class="table-project-n">Paket</span> Berjalan</h1>
                                 </div>
                             </div>
                             <div class="sparkline13-graph">
@@ -343,56 +368,56 @@
                                     </div>
                                     <!--Sampe Sini-->
 
-                                    <div id="toolbar">
                                     @if(!$data->isEmpty())
-                                    <table id="table-data" data-toggle="table" data-pagination="true">
+                                    <table id="table-data" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
+                                        data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
                                         <thead>
+                                            <tr>
+                                                <th>Metode Paket</th>
+                                                <th>Tahun</th>
+                                                <th>Bulan</th>
+                                                <th>Kode Paket</th>
+                                                <th>Nama Paket</th>
+                                                <th>Pagu Paket</th>
+                                                <th>HPS Paket</th>
+                                                <th>Jenis Paket</th>
+                                                <th>Awal Pemilihan</th>
+                                                <th>Akhir Pemilihan</th>
+                                                <th>Awal Kontrak</th>
+                                                <th>Akhir Kontrak</th>
+                                                <th>Status Paket</th>
+                                                <th>SKP</th>
+                                                <th>NPWP Perusahaan</th>
+                                                <th>Pemilik Pekerjaan</th>
+                                                <th>Nama Perusahaan</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            @foreach($data as $datas)
                                                 <tr>
-                                                    <th>Metode Paket</th>
-                                                    <th>Tahun</th>
-                                                    <th>Bulan</th>
-                                                    <th>Kode Paket</th>
-                                                    <th>Nama Paket</th>
-                                                    <th>Pagu Paket</th>
-                                                    <th>HPS Paket</th>
-                                                    <th>Jenis Paket</th>
-                                                    <th>Awal Pemilihan</th>
-                                                    <th>Akhir Pemilihan</th>
-                                                    <th>Awal Kontrak</th>
-                                                    <th>Akhir Kontrak</th>
-                                                    <th>Status Paket</th>
-                                                    <th>SKP</th>
-                                                    <th>Nama Perusahaan</th>
-                                                    <th>NPWP Perusahaan</th>
-                                                    <th>Pemilik Pekerjaan</th>
+                                                    <td valign="top" class="text-center">{{ $datas->metode_paket }}</td>
+                                                    <td valign="top" class="text-center">{{ $datas->tahun }}</td>
+                                                    <td valign="top" class="text-center">{{ $datas->bulan }}</td>
+                                                    <td valign="top" class="text-center">{{ $datas->kode_paket }}</td>
+                                                    <td valign="top" class="text-center">{{ $datas->nama_paket }}</td>
+                                                    <td valign="top" class="text-center">{{ $datas->pagu_paket }}</td>
+                                                    <td valign="top" class="text-center">{{ $datas->hps_paket }}</td>
+                                                    <td valign="top" class="text-center">{{ $datas->jenis_paket }}</td>
+                                                    <td valign="top" class="text-center">{{ $datas->awal_paket }}</td>
+                                                    <td valign="top" class="text-center">{{ $datas->akhir_paket }}</td>
+                                                    <td valign="top" class="text-center">{{ $datas->awal_kontrak_paket }}</td>
+                                                    <td valign="top" class="text-center">{{ $datas->akhir_kontrak_paket }}</td>
+                                                    <td valign="top" class="text-center">{{ $datas->paket_berjalan }}</td>
+                                                    <td valign="top" class="text-center">{{ $datas->skp}}</td>
+                                                    <td valign="top" class="text-center">{{ $datas->npwp_perusahaan }}</td>
+                                                    <td valign="top" class="text-center">{{ $datas->nama_satker }}</td>
+                                                    <td valign="top" class="text-center">{{ $datas->nama_perusahaan }}</td>
                                                 </tr>
-                                            </thead>
-                                            <tbody>
-                                                @foreach($data as $datas)
-                                                    <tr>
-                                                        <td valign="top" class="text-center">{{ $datas->metode_paket }}</td>
-                                                        <td valign="top" class="text-center">{{ $datas->tahun }}</td>
-                                                        <td valign="top" class="text-center">{{ $datas->bulan }}</td>
-                                                        <td valign="top" class="text-center">{{ $datas->kode_paket }}</td>
-                                                        <td valign="top" class="text-center">{{ $datas->nama_paket }}</td>
-                                                        <td valign="top" class="text-center">{{ $datas->pagu_paket }}</td>
-                                                        <td valign="top" class="text-center">{{ $datas->hps_paket }}</td>
-                                                        <td valign="top" class="text-center">{{ $datas->jenis_paket }}</td>
-                                                        <td valign="top" class="text-center">{{ $datas->awal_paket }}</td>
-                                                        <td valign="top" class="text-center">{{ $datas->akhir_paket }}</td>
-                                                        <td valign="top" class="text-center">{{ $datas->awal_kontrak_paket }}</td>
-                                                        <td valign="top" class="text-center">{{ $datas->akhir_kontrak_paket }}</td>
-                                                        <td valign="top" class="text-center">{{ $datas->paket_berjalan }}</td>
-                                                        <td valign="top" class="text-center">{{ $datas->skp}}</td>
-                                                        <td valign="top" class="text-center">{{ $datas->nama_perusahaan}}</td>
-                                                        <td valign="top" class="text-center">{{ $datas->npwp_perusahaan }}</td>
-                                                        <td valign="top" class="text-center">{{ $datas->nama_satker }}</td>
-                                                    </tr>
-                                                @endforeach
-                                            </tbody>
+                                            @endforeach
+                                        </tbody>
                                     </table>
                                     @else
-                                    <p class="text-center fs-4">Tidak ada Data yang Anda cari.</p>
+                                        <p class="text-center fs-4">Tidak ada Data yang Anda cari.</p>
                                     @endif
                                 </div>
                             </div>
@@ -407,7 +432,7 @@
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="footer-copy-right">
-                            <p>Copyright © 2022. PBJAP</p>
+                            <p>Copyright © 2022. PBJAP</a></p>
                         </div>
                     </div>
                 </div>
@@ -481,8 +506,6 @@
         <script src="{{url('js/admin/main.js')}}"></script>
         <!-- tawk chat JS
             ============================================ -->
-        <!--<script src="{{url('js/admin/tawk-chat.js')}}"></script>-->
+         <!-- tawk chat JS<script src="{{url('js/admin/tawk-chat.js')}}"></script>-->
 
 </body>
-
-</html>

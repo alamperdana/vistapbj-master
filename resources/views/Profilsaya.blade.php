@@ -391,49 +391,46 @@
                                                     <div class="col-lg-12">
                                                         
                                                         <form id="formUpload">
-                                                        @csrf
-
+                                                        @csrf 
                                                         <div class="form-group">
-<<<<<<< HEAD
                                                         <input type="hidden" class="form-control" id="id" name="id">
-=======
-                                                        <input type="hidden" class="form-control" id="name" name="name">
->>>>>>> 6d869fd (kompi kia)
+                                                        <input type="hidden" class="form-control" id="password" name="password">
+
+                                                        <h4>Nama Pengguna</h4>
+                                                        <input type="text" class="form-control" id="name" name="name" value="{{$data->name}}" readonly>
                                                         </div>
 
                                                         <div class="form-group">
-<<<<<<< HEAD
-                                                        <input type="text" class="form-control" id="name" name="name">
+                                                        <h4>NIP Pengguna</h4>
+                                                        <input type="number" class="form-control" id="nip" name="nip" value="{{$data->nip}}">
                                                         </div>
-                                                        <div>
-                                                        <input type="text" class="form-control" id="nip" name="nama_perusahaan" value="{{$data->nama_perusahaan}}" readonly>
-=======
-                                                            <input type="text" class="form-control" id="name" name="name">
->>>>>>> 6d869fd (kompi kia)
-                                                        </div>
-
-
-                                                        <div>
-                                                        <input type="text" class="form-control" id="nip" name="nama_perusahaan" value="{{$data->nama_perusahaan}}" readonly>
-                                                        </div>
-
 
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control" id="opd" name="opd" value="{{$data->opd}}">
+                                                        <h4>OPD Pengguna</h4>
+                                                        <input type="text" class="form-control" id="opd" name="opd" value="{{$data->opd}}">
                                                         </div>
-
 
                                                         <div class="form-group">
-                                                            <input type="number" class="form-control" id="telepon" name="telepon" value="$data->telepon">
+                                                        <h4>Telepon Pengguna</h4>
+                                                        <input type="number" class="form-control" id="telepon" name="telepon" value="{{$data->telepon}}">
                                                         </div>
-
 
                                                         <div class="form-group">
-                                                        <input type="text" class="form-control" id="email" name="email" value="$data->email">
+                                                        <h4>Email Pengguna</h4>
+                                                        <input type="varchar" class="form-control" id="email" name="email" value="{{$data->email}}">
                                                         </div>
 
+                                                        <div class="form-group">
+                                                            <h4>Password Pengguna</h4>
+                                                            <input type="varchar" class="form-control" id="password" name="password">
+                                                            </div>
 
-                                                        <div class="file-upload-inner ts-forms">
+                                                        <!-- <div class="form-group">
+                                                        <h4>Password Pengguna</h4>
+                                                        <input type="varchar" class="form-control" id="password">
+                                                        </div> -->
+
+                                                        <!-- <div class="file-upload-inner ts-forms">
                                                             <div class="input prepend-big-btn">
                                                                 <label class="icon-right" for="prepend-big-btn">
 																		<i class="fa fa-download"></i>
@@ -444,14 +441,16 @@
                                                                 </div>
                                                                 <input type="text" id="prepend-big-btn" placeholder="no file selected">
                                                             </div>
-                                                        </div>
+                                                        </div> -->
 
                                                     </div>
                                                 </div> 
                                                 <div class="row">
                                                     <div class="col-lg-12">
                                                         <div class="payment-adress mg-t-15">
-                                                            <button type="submit" class="btn btn-primary waves-effect waves-light mg-b-15">Submit</button>
+                                                            <!-- <button type="submit" class="btn btn-primary waves-effect waves-light mg-b-15">Submit</button> -->
+                                                            <button type="submit" class="btn btn-primary waves-effect waves-light">Submit</button>
+                                                            <!-- </form> -->
                                                         </div>
                                                     </div>
                                                 </div>
@@ -556,7 +555,7 @@
             event.preventDefault();
             var datas = new FormData(this);
                 $.ajax({
-                    url: '/Profilcontroller/store',
+                    url: '/editprofil/store',
                     data: datas,
                     cache: false,
                     contentType: false,

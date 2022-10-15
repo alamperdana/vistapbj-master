@@ -72,6 +72,7 @@
     <link rel="stylesheet" href="{{url('css/admin/responsive.css')}}">
     <!-- modernizr JS
 		============================================ -->
+    <link rel="stylesheet" href="{{url('assets/depan/plugins/bootstrap/css/bootstrap.css')}}">
     <script src="{{url('js/admin/vendor/modernizr-283.min.js')}}"></script>
 
     <script src="{{url('js/jquery.dataTables.min.js')}}" type="text/javascript"></script>
