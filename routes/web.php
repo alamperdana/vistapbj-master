@@ -86,11 +86,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('dashboardpaketuser/getdata/{tahun}', [dashboardPaketController::class, 'getdata3']);
-Route::get('dashboardpaketuser', [dashboardPaketController::class, 'index3'])->name('dashboardpaketuser');
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('dashboardpaketuser/getdata/{tahun}', [dashboardPaketController::class, 'getdata3']);
+// Route::get('dashboardpaketuser', [dashboardPaketController::class, 'index3'])->name('dashboardpaketuser');
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 //User Guide
 Route::get('/userguide', [UserguideController::class, 'index'])->name('userguide');

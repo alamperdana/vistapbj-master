@@ -116,15 +116,13 @@ color: red;
                                 <!-- <li><a title="Dashboard v.1" href="index.html"><span class="mini-sub-pro">Dashboard</span></a></li> -->
                             </ul> --}}
 
-                            <a class="has-arrow" href="{{route('caripenyedia')}}">
-                                <!--<span class="educate-icon educate-home icon-wrap"></span>-->
+                            <!-- <a class="has-arrow" href="{{route('caripenyedia')}}">
                                 <span class="mini-click-non"><i class="fa fa-search" aria-hidden="true"></i>  <i class="fa fa-file-text" aria-hidden="true"></i> Cari Penyedia</span>
                              </a>
 
                              <a class="has-arrow" href="{{route('cariskaskt')}}">
-                                <!--<span class="educate-icon educate-home icon-wrap"></span>-->
                                 <span class="mini-click-non"><i class="fa fa-search" aria-hidden="true"></i>  <i class="fa fa-file" aria-hidden="true"></i> Akun SKA/SKT</span>
-                             </a>
+                             </a> -->
                         </li>
 
                         <li>
@@ -132,18 +130,18 @@ color: red;
                                 <!--<span class="educate-icon educate-library icon-wrap"></span>-->
                                 <span class="mini-click-non"><i class="fa fa-file-text" aria-hidden="true"></i> Info Paket  </span></a>
                                 <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Add Library" href="{{route('tambahadminpaketberjalan')}}"><span class="mini-sub-pro"><i class="fa fa-plus-square" aria-hidden="true"></i> Tambah Data Info Paket Berjalan Manual</span></a></li>
-                                <li><a title="All Library" href="{{route('adminpaketberjalan')}}"><span class="mini-sub-pro"><i class="fa fa-folder-open" aria-hidden="true"></i> Data Semua Info Paket </span></a></li>
+                                <li><a title="All Library" href="{{route('tender.index')}}"><span class="mini-sub-pro"><i class="fa fa-folder-open" aria-hidden="true"></i> Tender </span></a></li>
+                                <li><a title="All Library" href="{{route('nontender.index')}}"><span class="mini-sub-pro"><i class="fa fa-folder-open" aria-hidden="true"></i> Non Tender </span></a></li>
                                 <li><a title="Add Library" href="{{route('dashboardpaket')}}"><span class="mini-sub-pro"><i class="fa fa-pie-chart" aria-hidden="true"></i> Chart</span></a></li>
                             </ul>
                         </li>
                         <li>
                             <a class="has-arrow" href="mailbox.html" aria-expanded="false">
                                 <!--<span class="educate-icon educate-data-table icon-wrap"></span>-->
-                                <span class="mini-click-non"><i class="fa fa-file" aria-hidden="true"></i>Info Penyedia</span></a>
+                                <span class="mini-click-non"><i class="fa fa-file" aria-hidden="true"></i>Info SKA/SKT</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Data Table" href="{{route('adminpenyedia')}}"><span class="mini-sub-pro"><i class="fa fa-users" aria-hidden="true"></i>Data Semua Info Penyedia</span></a></li>
-                                <li><a title="Data Table" href="{{route('tambahadmininfopenyedia')}}"><span class="mini-sub-pro"><i class="fa fa-keyboard-o" aria-hidden="true"></i>Tambah Data Info Penyedia Manual</span></a></li>
+                                <li><a title="Data Table" href="{{route('staf.index')}}"><span class="mini-sub-pro"><i class="fa fa-users" aria-hidden="true"></i> SKA/SKT </span></a></li>
+                                <!-- <li><a title="Data Table" href="{{route('tambahadmininfopenyedia')}}"><span class="mini-sub-pro"><i class="fa fa-keyboard-o" aria-hidden="true"></i>Tambah Data Info Penyedia Manual</span></a></li> -->
                             </ul>
                         </li>    
                         <!--

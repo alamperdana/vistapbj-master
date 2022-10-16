@@ -120,15 +120,13 @@ color: red;
                                 <!-- <li><a title="Dashboard v.1" href="index.html"><span class="mini-sub-pro">Dashboard</span></a></li> -->
                             </ul> --}}
 
-                            <a class="has-arrow" href="{{route('caripenyedia')}}">
-                                <!--<span class="educate-icon educate-home icon-wrap"></span>-->
+                            <!-- <a class="has-arrow" href="{{route('caripenyedia')}}">
                                 <span class="mini-click-non"><i class="fa fa-search" aria-hidden="true"></i>  <i class="fa fa-file-text" aria-hidden="true"></i> Cari Penyedia</span>
                              </a>
 
                              <a class="has-arrow" href="{{route('cariskaskt')}}">
-                                <!--<span class="educate-icon educate-home icon-wrap"></span>-->
                                 <span class="mini-click-non"><i class="fa fa-search" aria-hidden="true"></i>  <i class="fa fa-file" aria-hidden="true"></i> Akun SKA/SKT</span>
-                             </a>
+                             </a> -->
                         </li>
 
                         <li>
@@ -356,9 +354,10 @@ color: red;
                                     <table class="table table-bordered table-sm table-hover" cellspacing="0" width="100%" id="staf-table">
                                         <thead>
                                             <tr>
-                                                <th>Kode Paket</th>
-                                                <th>Nama Paket</th>
-                                                <th>Tenaga Ahli/Teknis</th>
+                                                <th class="align-middle text-center">Kode Paket</th>
+                                                <th class="align-middle text-center">Tahun</th>
+                                                <th class="align-middle text-center">Nama Paket</th>
+                                                <th class="align-middle text-center">Tenaga Ahli/Teknis</th>
                                             </tr>
                                         </thead>
                                     </table>
@@ -375,7 +374,13 @@ color: red;
                                                 ajax: '{!! route('staf.index') !!}', // memanggil route yang menampilkan data json
                                                 columns: [{ // mengambil & menampilkan kolom sesuai tabel database
                                                         data: 'pkt_id',
-                                                        name: 'pkt_id'
+                                                        name: 'pkt_id',
+                                                        className: "text-center"
+                                                    },
+                                                    {
+                                                        data: 'tahun',
+                                                        name: 'tahun',
+                                                        className: "text-center"
                                                     },
                                                     {
                                                         data: 'pkt_nama',

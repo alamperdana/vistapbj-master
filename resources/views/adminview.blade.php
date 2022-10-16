@@ -109,22 +109,20 @@ color: red;
                     <ul class="metismenu" id="menu1">
                         <li class="active">
                             <a class="has-arrow" href="{{route('admin')}}">
-								   <!--<span class="educate-icon educate-home icon-wrap"></span>-->
+								   <!-- <span class="educate-icon educate-home icon-wrap"></span> -->
                                    <span class="mini-click-non"><i class="fa fa-address-card" aria-hidden="true"></i></i> Akun Pengguna</span>
 								</a>
                             {{-- <ul class="submenu-angle" aria-expanded="true">
                                 <!-- <li><a title="Dashboard v.1" href="index.html"><span class="mini-sub-pro">Dashboard</span></a></li> -->
                             </ul> --}}
 
-                            <a class="has-arrow" href="{{route('caripenyedia')}}">
-                                <!--<span class="educate-icon educate-home icon-wrap"></span>-->
+                            <!-- <a class="has-arrow" href="{{route('caripenyedia')}}">
                                 <span class="mini-click-non"><i class="fa fa-search" aria-hidden="true"></i>  <i class="fa fa-file-text" aria-hidden="true"></i> Cari Penyedia</span>
                              </a>
 
                              <a class="has-arrow" href="{{route('cariskaskt')}}">
-                                <!--<span class="educate-icon educate-home icon-wrap"></span>-->
                                 <span class="mini-click-non"><i class="fa fa-search" aria-hidden="true"></i>  <i class="fa fa-file" aria-hidden="true"></i> Akun SKA/SKT</span>
-                             </a>
+                             </a> -->
                         </li>
 
                         <li>

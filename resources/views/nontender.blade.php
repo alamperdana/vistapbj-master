@@ -120,15 +120,13 @@ color: red;
                                 <!-- <li><a title="Dashboard v.1" href="index.html"><span class="mini-sub-pro">Dashboard</span></a></li> -->
                             </ul> --}}
 
-                            <a class="has-arrow" href="{{route('caripenyedia')}}">
-                                <!--<span class="educate-icon educate-home icon-wrap"></span>-->
+                            <!-- <a class="has-arrow" href="{{route('caripenyedia')}}">
                                 <span class="mini-click-non"><i class="fa fa-search" aria-hidden="true"></i>  <i class="fa fa-file-text" aria-hidden="true"></i> Cari Penyedia</span>
                              </a>
 
                              <a class="has-arrow" href="{{route('cariskaskt')}}">
-                                <!--<span class="educate-icon educate-home icon-wrap"></span>-->
                                 <span class="mini-click-non"><i class="fa fa-search" aria-hidden="true"></i>  <i class="fa fa-file" aria-hidden="true"></i> Akun SKA/SKT</span>
-                             </a>
+                             </a> -->
                         </li>
 
                         <li>
@@ -356,12 +354,14 @@ color: red;
                                     <table class="table table-bordered table-sm table-hover" cellspacing="0" width="100%" id="nontender-table">
                                         <thead>
                                             <tr>
-                                                <th>Tahun</th>
-                                                <th>Kode Paket</th>
-                                                <th>Nama Paket</th>
-                                                <th>Nilai HPS</th>
-                                                <th>Nama Pemenang</th>
-                                                <th>Nilai Kontrak</th>
+                                                <th class="align-middle text-center">Tahun</th>
+                                                <th class="align-middle text-center">Kode Paket</th>
+                                                <th class="align-middle text-center">Nama Paket</th>
+                                                <th class="align-middle text-center">Nilai HPS</th>
+                                                <th class="align-middle text-center">Nama Pemenang</th>
+                                                <th class="align-middle text-center">NPWP</th>
+                                                <th class="align-middle text-center">Tanggal Kontrak</th>
+                                                <th class="align-middle text-center">Nilai Kontrak</th>
                                             </tr>
                                         </thead>
                                     </table>
@@ -378,11 +378,13 @@ color: red;
                                                 ajax: '{!! route('nontender.index') !!}', // memanggil route yang menampilkan data json
                                                 columns: [{ // mengambil & menampilkan kolom sesuai tabel database
                                                         data: 'tahun',
-                                                        name: 'tahun'
+                                                        name: 'tahun',
+                                                        className: "text-center"
                                                     },
                                                     {
-                                                        data: 'pkt_id',
-                                                        name: 'pkt_id'
+                                                        data: 'lls_id',
+                                                        name: 'lls_id',
+                                                        className: "text-center"
                                                     },
                                                     {
                                                         data: 'pkt_nama',
@@ -398,6 +400,14 @@ color: red;
                                                         data: 'rkn_nama',
                                                         name: 'rkn_nama',
                                                         width: '200'
+                                                    },
+                                                    {
+                                                        data: 'rkn_npwp',
+                                                        name: 'rkn_npwp'
+                                                    },
+                                                    {
+                                                        data: 'tgl_kontrak',
+                                                        name: 'tgl_kontrak'
                                                     },
                                                     {
                                                         data: 'harga_terkoreksi',

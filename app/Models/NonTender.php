@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class NonTender extends Model
 {
     use HasFactory;
-    protected $connection = "pgsql";
-    protected $table = "infonontender";
+    protected $connection = "pgsql"; //DB Driver
+    protected $table = "infonontender"; // DB Table
 }

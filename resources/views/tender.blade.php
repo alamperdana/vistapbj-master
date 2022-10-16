@@ -120,15 +120,13 @@ color: red;
                                 <!-- <li><a title="Dashboard v.1" href="index.html"><span class="mini-sub-pro">Dashboard</span></a></li> -->
                             </ul> --}}
 
-                            <a class="has-arrow" href="{{route('caripenyedia')}}">
-                                <!--<span class="educate-icon educate-home icon-wrap"></span>-->
+                            <!-- <a class="has-arrow" href="{{route('caripenyedia')}}">
                                 <span class="mini-click-non"><i class="fa fa-search" aria-hidden="true"></i>  <i class="fa fa-file-text" aria-hidden="true"></i> Cari Penyedia</span>
                              </a>
 
                              <a class="has-arrow" href="{{route('cariskaskt')}}">
-                                <!--<span class="educate-icon educate-home icon-wrap"></span>-->
                                 <span class="mini-click-non"><i class="fa fa-search" aria-hidden="true"></i>  <i class="fa fa-file" aria-hidden="true"></i> Akun SKA/SKT</span>
-                             </a>
+                             </a> -->
                         </li>
 
                         <li>
@@ -356,14 +354,16 @@ color: red;
                                 <table class="table table-bordered table-sm table-hover" cellspacing="0" width="100%" id="tender-table">
                                         <thead>
                                             <tr>
-                                                <th >Tahun</th>
-                                                <th>Kode Tender</th>
-                                                <th>Nama Paket</th>
-                                                <th>Nilai HPS</th>
-                                                <th>Nama Pemenang</th>
-                                                <th>Nilai Kontrak</th>
-                                                <th>Jumlah Peserta</th>
-                                                <th>Jumlah Penawar</th>
+                                                <th class="align-middle text-center">Tahun</th>
+                                                <th class="align-middle text-center">Kode Tender</th>
+                                                <th class="align-middle text-center">Nama Paket</th>
+                                                <th class="align-middle text-center">Nilai HPS</th>
+                                                <th class="align-middle text-center">Nama Pemenang</th>
+                                                <th class="align-middle text-center">NPWP</th>
+                                                <th class="align-middle text-center">Tanggal Kontrak</th>
+                                                <th class="align-middle text-center">Nilai Kontrak</th>
+                                                <th class="align-middle text-center">Jumlah Peserta</th>
+                                                <th class="align-middle text-center">Jumlah Penawar</th>
                                             </tr>
                                         </thead>
                                     </table>
@@ -380,20 +380,25 @@ color: red;
                                                 ajax: '{!! route('tender.index') !!}', // memanggil route yang menampilkan data json
                                                 columns: [{ // mengambil & menampilkan kolom sesuai tabel database
                                                         data: 'tahun',
-                                                        name: 'tahun'
+                                                        name: 'tahun',
+                                                        width: '100',
+                                                        className: "text-center"
                                                     },
                                                     {
-                                                        data: 'pkt_id',
-                                                        name: 'pkt_id'
+                                                        data: 'lls_id',
+                                                        name: 'lls_id',
+                                                        width: '100',
+                                                        className: "text-center"
                                                     },
                                                     {
                                                         data: 'pkt_nama',
                                                         name: 'pkt_nama',
-                                                        width: '400'
+                                                        width: '500'
                                                     },
                                                     {
                                                         data: 'pkt_hps',
                                                         name: 'pkt_hps',
+                                                        width: '150',
                                                         render: $.fn.dataTable.render.number(",", ".", 2)
                                                     },
                                                     {
@@ -402,17 +407,30 @@ color: red;
                                                         width: '150'
                                                     },
                                                     {
+                                                        data: 'rkn_npwp',
+                                                        name: 'rkn_npwp'
+                                                    },
+                                                    {
+                                                        data: 'tgl_kontrak',
+                                                        name: 'tgl_kontrak'
+                                                    },
+                                                    {
                                                         data: 'harga_terkoreksi',
                                                         name: 'harga_terkoreksi',
+                                                        width: '150',
                                                         render: $.fn.dataTable.render.number(",", ".", 2)
                                                     },
                                                     {
                                                         data: 'jml_peserta',
-                                                        name: 'jml_peserta'
+                                                        name: 'jml_peserta',
+                                                        width: '60',
+                                                        className: "text-center"
                                                     },
                                                     {
                                                         data: 'jml_rkn_nawar',
-                                                        name: 'jml_rkn_nawar'
+                                                        name: 'jml_rkn_nawar',
+                                                        width: '60',
+                                                        className: "text-center"
                                                     }
                                                 ]
                                             });
