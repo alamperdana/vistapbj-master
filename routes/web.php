@@ -16,6 +16,9 @@ use App\Http\Controllers\userInfoPenyediaController;
 use App\Http\Controllers\CariPenyediaController;
 use App\Http\Controllers\CariSkaSktController;
 use App\Http\Controllers\UserguideController;
+use App\Http\Controllers\TenderController;
+use App\Http\Controllers\NonTenderController;
+use App\Http\Controllers\StafController;
 
 /*
 |--------------------------------------------------------------------------
@@ -140,13 +143,17 @@ Route::get('/userinfopenyedia', [userInfoPenyediaController::class, 'index'])->n
 Route::post('/userinfopenyedia/import', [userInfoPenyediaController::class, 'import']);
 
 //Info Tender
-Route::get('/tender/json', [\App\Http\Controllers\TenderController::class, 'data'])->name('tender.data');
-Route::get('/tender', [\App\Http\Controllers\TenderController::class, 'index'])->name('tender.index');
+Route::get('/tender/json', [TenderController::class, 'data'])->name('tender.data');
+Route::get('/tender', [TenderController::class, 'index'])->name('tender.index');
 
 //Info NonTender
-Route::get('/nontender/json', [\App\Http\Controllers\NonTenderController::class, 'data'])->name('nontender.data');
-Route::get('/nontender', [\App\Http\Controllers\NonTenderController::class, 'index'])->name('nontender.index');
+Route::get('/nontender/json', [NonTenderController::class, 'data'])->name('nontender.data');
+Route::get('/nontender', [NonTenderController::class, 'index'])->name('nontender.index');
 
 //Info Staf
-Route::get('/staf/json', [\App\Http\Controllers\StafController::class, 'data'])->name('staf.data');
-Route::get('/staf', [\App\Http\Controllers\StafController::class, 'index'])->name('staf.index');
+Route::get('/staf/json', [StafController::class, 'data'])->name('staf.data');
+Route::get('/staf', [StafController::class, 'index'])->name('staf.index');
+
+//dummy view
+// Route::get('/dummy/json', [\App\Http\Controllers\NonTenderController::class, 'data'])->name('dummystaf.data');
+// Route::get('/dummy', [\App\Http\Controllers\NonTenderController::class, 'index'])->name('dummystaf.index');
