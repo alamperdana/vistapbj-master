@@ -13,7 +13,7 @@ class UserguideController extends Controller
     }
 
     public function downloaduserguide (){
-        $filepath = public_path('download/userguidee.pdf');
+        $filepath = public_path('download/userguide.pdf');
         return Response::download($filepath);  
     }
 }

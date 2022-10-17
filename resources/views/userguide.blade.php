@@ -187,7 +187,7 @@
 <br>
 <br>
 <br>
-
+<!-- 
   <section id="resume" class="container section">
     <div class="row">
       <div class="col-md-10">
@@ -201,7 +201,7 @@
     <video width="600" height="350" controls>   
     <source src="{{URL('assets/videoplayback.mp4')}}" type="video/mp4">   
     </video>  
-  </div> 
+  </div>  -->
   
   <hr>
 
